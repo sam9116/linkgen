@@ -1,2 +1,2 @@
-MainPackage=C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\ARM\Release\LinkGen_1.0.9.0_ARM.appx
-SymbolPackage=C:\Users\Sam\OneDrive\LinkGen\LinkGen\AppPackages\LinkGen_1.0.9.0_Test\LinkGen_1.0.9.0_ARM.appxsym
+MainPackage=C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\ARM\Release\LinkGen_1.0.12.0_ARM.appx
+SymbolPackage=C:\Users\Sam\OneDrive\LinkGen\LinkGen\AppPackages\LinkGen_1.0.12.0_Test\LinkGen_1.0.12.0_ARM.appxsym

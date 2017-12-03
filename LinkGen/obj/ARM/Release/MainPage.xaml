@@ -47,26 +47,30 @@
         <StackPanel x:ConnectionId='3' x:Name="inputPanel" Grid.Row="2" Width ="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" >
 
             <StackPanel Orientation="Horizontal" Height="Auto" Margin="10" />
-            <TextBlock x:ConnectionId='10' x:Name="FrameInfoTextBlock" VerticalAlignment="Center" Foreground="#FF009C15"/>
+            <TextBlock x:ConnectionId='12' x:Name="FrameInfoTextBlock" VerticalAlignment="Center" Foreground="#FF009C15"/>
 
             
         </StackPanel>
-        <Grid Grid.Row="0" Grid.Column="1" Margin="20,20,20,20" Height="Auto">
+        <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,0" Height="Auto">
             
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="10*"></RowDefinition>
             </Grid.RowDefinitions>
+            
             <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition x:ConnectionId='6' x:Name="urlbox" Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='7' VerticalAlignment="top" HorizontalAlignment="Center" Grid.Column="0" x:Name="LinkGen"  Content="LinkGen" Height="Auto"  Foreground="#FF3A3A3A"                                       Background="#33B2B2B2"/>
-                <TextBox x:ConnectionId='8' x:Name="nameInput" Grid.Column="1"                        Width="{Binding Path=ActualWidth, ElementName=urlbox}" VerticalAlignment="Center"/>
-                <Button x:ConnectionId='9' VerticalAlignment="top" x:Name="inputButton" HorizontalAlignment="Center" Grid.Column="2"  Content="Go to URL"                         Background="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"/>
 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:ConnectionId='6' x:Name="firstcolumn"  Width="*"></ColumnDefinition>
+                    <ColumnDefinition x:ConnectionId='7' x:Name="secondcolumn" Width="3*"></ColumnDefinition>
+                    <ColumnDefinition x:ConnectionId='8' x:Name="thirdcolumn" Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:ConnectionId='9' VerticalAlignment="top" Grid.Column="0" HorizontalAlignment="Left" x:Name="LinkGen" Width="{Binding Path=ActualWidth, ElementName=firstcolumn}" Content="LinkGen" Height="Auto"  Foreground="#FF3A3A3A"                                       Background="#33B2B2B2"/>
+                <!-- TextBox x:Name="nameInput" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" KeyDown="enter_press" /-->
+                <ListView x:ConnectionId='10' x:Name = "listofurl" Grid.Column="1" HorizontalAlignment="Center"  Width="{Binding Path=ActualWidth, ElementName=secondcolumn}" Height="Auto"></ListView>
+                <Button x:ConnectionId='11' VerticalAlignment="top" Grid.Column="2" HorizontalAlignment="Right" x:Name="inputButton" Width="{Binding Path=ActualWidth, ElementName=thirdcolumn}" Content="Go To URL" Height="Auto"                        Background="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"></Button>
+
+                
 
 
             </Grid>

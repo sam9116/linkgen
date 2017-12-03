@@ -66,7 +66,8 @@
                     <ColumnDefinition x:Name="thirdcolumn" Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button VerticalAlignment="top" Grid.Column="0" HorizontalAlignment="Left" x:Name="LinkGen" Width="{Binding Path=ActualWidth, ElementName=firstcolumn}" Content="LinkGen" Height="Auto"  Foreground="#FF3A3A3A" Tapped="GetPreviewFrameButton_Tapped" Background="#33B2B2B2"/>
-                <TextBox x:Name="nameInput" Grid.Column="1" HorizontalAlignment="Center" KeyDown="enter_press" Width="{Binding Path=ActualWidth, ElementName=secondcolumn}" VerticalAlignment="Center"/>
+                <!-- TextBox x:Name="nameInput" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" KeyDown="enter_press" /-->
+                <ListView x:Name = "listofurl" Grid.Column="1" HorizontalAlignment="Center"  Width="{Binding Path=ActualWidth, ElementName=secondcolumn}" Height="Auto"></ListView>
                 <Button VerticalAlignment="top" Grid.Column="2" HorizontalAlignment="Right" x:Name="inputButton" Width="{Binding Path=ActualWidth, ElementName=thirdcolumn}" Content="Go To URL" Height="Auto" Click="button_clicked" Background="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"></Button>
 
                 

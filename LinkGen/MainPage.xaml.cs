@@ -121,7 +121,17 @@ namespace LinkGen
         private void button_clicked(object sender, RoutedEventArgs e)
         {
             //greetingOutput.Text = "Hello, " + nameInput.Text + "!";
-            enter_pressed();
+            if(listofurl.Items.Count >= 1)
+            {
+                ListViewItem t = (ListViewItem)listofurl.SelectedItem;
+                if (t!=null)
+                {
+                    TextBox y = (TextBox)t.Content;
+                    enter_pressed(y);
+                }
+                
+            }
+            
 
         }
 
@@ -130,11 +140,14 @@ namespace LinkGen
             if (e.Key == VirtualKey.Enter)
             {
 
-                enter_pressed();
+                ListViewItem t = (ListViewItem)sender;
+                TextBox y = (TextBox)t.Content;
+                enter_pressed(y);
 
             }
         }
-        /*private async void enter_pressed()
+        
+        private async void enter_pressed(TextBox nameInput)
         {
             if (!nameInput.Text.Contains("http://") && !nameInput.Text.Contains("https://"))
                 nameInput.Text = "http://" + nameInput.Text;
@@ -142,7 +155,7 @@ namespace LinkGen
 
             await Launcher.LaunchUriAsync(link);
 
-        }*/
+        }
   
         private async void load_image(SoftwareBitmap bitmap)
         {
@@ -159,8 +172,15 @@ namespace LinkGen
                   {
                     //filter = s;
                     ListViewItem item = new ListViewItem();
-                    
+                    TextBox urlbox = new TextBox();
+                    urlbox.Width = secondcolumn.ActualWidth;
+                    urlbox.Text = s;
+                    item.Content = urlbox;
+                    item.KeyDown += enter_press;
+                    listofurl.Items.Add(item);
+                    LinkGen.Content = "url added!";
                   }
+                  
                 }
                 // Display recognized text.
                // nameInput.Text = filter;
@@ -454,7 +474,7 @@ new FocusSettings { Mode = FocusMode.Auto });
                 // Show the frame information
                 FrameInfoTextBlock.Text = String.Format("{0}x{1} {2}", previewFrame.PixelWidth, previewFrame.PixelHeight, previewFrame.BitmapPixelFormat);
                 // Create image decoder.
-                nameInput.Text = Package.Current.InstalledLocation.Path.ToString();
+                //nameInput.Text = Package.Current.InstalledLocation.Path.ToString();
                 
 
  
