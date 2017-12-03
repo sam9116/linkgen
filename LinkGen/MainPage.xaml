@@ -62,7 +62,7 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="firstcolumn"  Width="*"></ColumnDefinition>
-                    <ColumnDefinition x:Name="secondcolumn" Width="3*"></ColumnDefinition>
+                    <ColumnDefinition x:Name="secondcolumn" Width="4*"></ColumnDefinition>
                     <ColumnDefinition x:Name="thirdcolumn" Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button VerticalAlignment="top" Grid.Column="0" HorizontalAlignment="Left" x:Name="LinkGen" Width="{Binding Path=ActualWidth, ElementName=firstcolumn}" Content="LinkGen" Height="Auto"  Foreground="#FF3A3A3A" Tapped="GetPreviewFrameButton_Tapped" Background="#33B2B2B2"/>

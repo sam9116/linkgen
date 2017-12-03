@@ -62,7 +62,7 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:ConnectionId='6' x:Name="firstcolumn"  Width="*"></ColumnDefinition>
-                    <ColumnDefinition x:ConnectionId='7' x:Name="secondcolumn" Width="3*"></ColumnDefinition>
+                    <ColumnDefinition x:ConnectionId='7' x:Name="secondcolumn" Width="4*"></ColumnDefinition>
                     <ColumnDefinition x:ConnectionId='8' x:Name="thirdcolumn" Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button x:ConnectionId='9' VerticalAlignment="top" Grid.Column="0" HorizontalAlignment="Left" x:Name="LinkGen" Width="{Binding Path=ActualWidth, ElementName=firstcolumn}" Content="LinkGen" Height="Auto"  Foreground="#FF3A3A3A"                                       Background="#33B2B2B2"/>

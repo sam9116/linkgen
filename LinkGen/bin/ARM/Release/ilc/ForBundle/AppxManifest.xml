@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=Sam" Version="1.0.12.0" ProcessorArchitecture="arm" />
+  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=Sam" Version="1.0.15.0" ProcessorArchitecture="arm" />
   <mp:PhoneIdentity PhoneProductId="9724b72a-0814-4064-8c0a-ea2b929b29b5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>LinkGen</DisplayName>

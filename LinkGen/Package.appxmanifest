@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=Sam" Version="1.0.12.0" />
+  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=Sam" Version="1.0.15.0" />
   <mp:PhoneIdentity PhoneProductId="9724b72a-0814-4064-8c0a-ea2b929b29b5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>LinkGen</DisplayName>
