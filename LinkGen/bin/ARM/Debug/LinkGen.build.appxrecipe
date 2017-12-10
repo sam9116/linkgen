@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
     <PackageArchitecture>arm</PackageArchitecture>
-    <PackageIdentityName>9724b72a-0814-4064-8c0a-ea2b929b29b5</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Sam</PackageIdentityPublisher>
+    <PackageIdentityName>e0540f4f-2252-45fe-a967-b197acbc045c</PackageIdentityName>
+    <PackageIdentityPublisher>CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Sam\OneDrive\LinkGen\LinkGen\obj\ARM\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>

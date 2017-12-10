@@ -20,6 +20,13 @@ using Windows.UI.Core;
 using System.Diagnostics;
 using Windows.Storage;
 using Windows.Media.Devices;
+using Windows.UI.ViewManagement;
+using Windows.Foundation;
+using Windows.Foundation.Metadata;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage.Streams;
+using System.Collections.Generic;
+using SDKTemplate;
 
 
 
@@ -60,45 +67,9 @@ namespace LinkGen
         private bool _externalCamera = false;
 
 
+        // Folder in which the captures will be stored (initialized in InitializeCameraAsync)
 
-        /*private void UpdateFocusControlCapabilities()
-        {
-            var focusControl = _mediaCapture.VideoDeviceController.FocusControl;
-
-            if (focusControl.Supported)
-            {
-                FocusButton.Tag = Visibility.Visible;
-
-                // Unhook the event handler, so that changing properties on the slider won't trigger an API call
-                FocusSlider.ValueChanged -= FocusSlider_ValueChanged;
-
-                var value = focusControl.Value;
-                FocusSlider.Minimum = focusControl.Min;
-                FocusSlider.Maximum = focusControl.Max;
-                FocusSlider.StepFrequency = focusControl.Step;
-                FocusSlider.Value = value;
-
-                FocusSlider.ValueChanged += FocusSlider_ValueChanged;
-
-                CafFocusRadioButton.Visibility = focusControl.SupportedFocusModes.Contains(FocusMode.Continuous) ? Visibility.Visible : Visibility.Collapsed;
-
-                // Tap to focus requires support for RegionsOfInterest
-                TapFocusRadioButton.Visibility = (_mediaCapture.VideoDeviceController.RegionsOfInterestControl.AutoFocusSupported &&
-                                                  _mediaCapture.VideoDeviceController.RegionsOfInterestControl.MaxRegions > 0) ? Visibility.Visible : Visibility.Collapsed;
-
-                // Show the focus assist light only if the device supports it. Note that it exists under the FlashControl (not the FocusControl), so check for support there first
-                FocusLightCheckBox.Visibility = (_mediaCapture.VideoDeviceController.FlashControl.Supported &&
-                                                 _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported) ? Visibility.Visible : Visibility.Collapsed;
-
-                ManualFocusRadioButton.IsChecked = true;
-            }
-            else
-            {
-                FocusButton.Visibility = Visibility.Collapsed;
-                FocusButton.Tag = Visibility.Collapsed;
-            }
-        }*/
-
+        private StorageFolder _captureFolder = null;
 
 
 
@@ -110,80 +81,106 @@ namespace LinkGen
             // Cache the UI to have the checkboxes retain their state, as the enabled/disabled state of the
             // GetPreviewFrameButton is reset in code when suspending/navigating (see Start/StopPreviewAsync)
 
-
             // Useful to know when to initialize/clean up the camera
 
 
         }
-   
 
- 
-        private void button_clicked(object sender, RoutedEventArgs e)
+
+        private bool IsVisibileToUser(FrameworkElement element, FrameworkElement container)
+        {
+            if (element == null || container == null)
+                return false;
+
+
+            Rect elementBounds = element.TransformToVisual(container).TransformBounds(new Rect(0.0, 0.0, element.ActualWidth, element.ActualHeight));
+            Rect containerBounds = new Rect(0.0, 0.0, container.ActualWidth, container.ActualHeight);
+
+            return (elementBounds.Bottom <= containerBounds.Top && elementBounds.Top >= containerBounds.Bottom);
+        }
+
+        private void Button_clicked(object sender, RoutedEventArgs e)
         {
             //greetingOutput.Text = "Hello, " + nameInput.Text + "!";
-            if(listofurl.Items.Count >= 1)
-            {
-                ListViewItem t = (ListViewItem)listofurl.SelectedItem;
-                if (t!=null)
-                {
-                    TextBox y = (TextBox)t.Content;
-                    enter_pressed(y);
-                }
-                
-            }
-            
+
+            Button b = (Button)sender;
+            StackPanel l = (StackPanel)b.Parent;
+            TextBox y = (TextBox)l.Children[1];
+            Enter_pressed(y);
 
         }
 
-        private void enter_press(object sender, KeyRoutedEventArgs e)
+        private void Enter_press(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.Enter)
             {
-
-                ListViewItem t = (ListViewItem)sender;
-                TextBox y = (TextBox)t.Content;
-                enter_pressed(y);
+                Enter_pressed((TextBox)sender);
 
             }
         }
-        
-        private async void enter_pressed(TextBox nameInput)
+
+        private async void Enter_pressed(TextBox nameInput)
         {
-            if (!nameInput.Text.Contains("http://") && !nameInput.Text.Contains("https://"))
+            if (!nameInput.Text.Contains("http://") && !nameInput.Text.Contains("https://") && !nameInput.Text.Contains("@"))
                 nameInput.Text = "http://" + nameInput.Text;
+            if (nameInput.Text.Contains("@"))
+            {
+                nameInput.Text = "mailto:" + nameInput.Text;
+            }
             Uri link = new Uri(nameInput.Text, UriKind.Absolute);
 
             await Launcher.LaunchUriAsync(link);
+            await CleanupCameraAsync();
 
         }
-  
-        private async void load_image(SoftwareBitmap bitmap)
+
+        private async void Load_image(SoftwareBitmap bitmap)
         {
 
-                OcrResult result = await ocrEngine.RecognizeAsync(bitmap);
-                //
-                
-                //nameInput.Text = "we got this far";
+            listofurl.Items.Clear();
 
-                string[] ssize = result.Text.Split(' ');
-                foreach(string s in ssize)
+
+
+
+
+
+            OcrResult result = await ocrEngine.RecognizeAsync(bitmap);
+
+            string[] ssize = result.Text.Split(' ');
+            foreach (string s in ssize)
+            {
+                if (s.Contains("http://") || s.Contains("https://") || s.Contains(".com") || s.Contains(".ca") || s.Contains(".org") || s.Contains(".COM") || s.Contains(".CA") || s.Contains(".ORG"))
                 {
-                  if(s.Contains("http://")||s.Contains("https://")||s.Contains(".com")||s.Contains(".ca")||s.Contains(".org")||s.Contains(".COM")||s.Contains(".CA")||s.Contains(".ORG"))
-                  {
                     //filter = s;
+
                     ListViewItem item = new ListViewItem();
+                    Button gobutton = new Button();
                     TextBox urlbox = new TextBox();
-                    urlbox.Width = secondcolumn.ActualWidth;
+                    StackPanel holder = new StackPanel();
+                    holder.Orientation = Orientation.Horizontal;
+
+                    gobutton.Content = "Go";
+                    gobutton.Click += Button_clicked;
+                    gobutton.HorizontalAlignment = HorizontalAlignment.Right;
+
+
+                    urlbox.Margin = (new Thickness(3));
+                    urlbox.MaxWidth = 300;
+
                     urlbox.Text = s;
-                    item.Content = urlbox;
-                    item.KeyDown += enter_press;
+                    urlbox.KeyDown += Enter_press;
+
+                    holder.Children.Add(gobutton);
+                    holder.Children.Add(urlbox);
+
+                    item.Content = holder;
                     listofurl.Items.Add(item);
-                    LinkGen.Content = "url added!";
-                  }
-                  
+                    //inputButton.Content = "Go";
                 }
-                // Display recognized text.
-               // nameInput.Text = filter;
+
+            }
+            // Display recognized text.
+            // nameInput.Text = filter;
 
         }
 
@@ -222,7 +219,22 @@ namespace LinkGen
             _displayOrientation = _displayInformation.CurrentOrientation;
             _displayInformation.OrientationChanged += DisplayInformation_OrientationChanged;
 
+
+
+            //Mobile customization
+            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+            {
+                StatusBar statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
+                await statusBar.HideAsync();
+            }
+
             await InitializeCameraAsync();
+            if (_isPreviewing)
+            {
+                await GetPreviewFrameAsSoftwareBitmapAsync();
+            }
+
+
         }
 
         protected override async void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -234,7 +246,7 @@ namespace LinkGen
             _displayInformation.OrientationChanged -= DisplayInformation_OrientationChanged;
         }
 
-#endregion Constructor, lifecycle and navigation
+        #endregion Constructor, lifecycle and navigation
 
 
         #region Event handlers
@@ -285,10 +297,11 @@ namespace LinkGen
         {
             // If preview is not running, no preview frames can be acquired
             if (!_isPreviewing) return;
-
+            //await Task.Delay(1000);
             await GetPreviewFrameAsSoftwareBitmapAsync();
 
-          
+
+
         }
 
         private async void MediaCapture_Failed(MediaCapture sender, MediaCaptureFailedEventArgs errorEventArgs)
@@ -297,7 +310,7 @@ namespace LinkGen
 
             await CleanupCameraAsync();
 
-            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => LinkGen.IsEnabled = _isPreviewing);
+            //await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => LinkGen.IsEnabled = _isPreviewing);
         }
 
         #endregion Event handlers
@@ -324,6 +337,13 @@ namespace LinkGen
                     return;
                 }
 
+
+                var picturesLibrary = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Pictures);
+
+                // Fall back to the local app storage if the Pictures Library is not available
+
+                _captureFolder = picturesLibrary.SaveFolder ?? ApplicationData.Current.LocalFolder;
+
                 // Create MediaCapture and its settings
                 _mediaCapture = new MediaCapture();
 
@@ -331,6 +351,7 @@ namespace LinkGen
                 _mediaCapture.Failed += MediaCapture_Failed;
 
                 var settings = new MediaCaptureInitializationSettings { VideoDeviceId = cameraDevice.Id };
+
 
                 // Initialize MediaCapture
                 try
@@ -361,6 +382,29 @@ namespace LinkGen
                         _mirroringPreview = (cameraDevice.EnclosureLocation.Panel == Windows.Devices.Enumeration.Panel.Front);
                     }
 
+
+                    var flashControl = _mediaCapture.VideoDeviceController.FlashControl;
+                    if (flashControl.Supported)
+                    {
+                        var assustantlight = _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported;
+                        if (assustantlight)
+                        {
+                            FlashButton.IsEnabled = true;
+                        }
+                    }
+
+
+                    // Query all properties of the device
+                    IEnumerable<StreamResolution> allProperties = _mediaCapture.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.VideoPreview).Select(x => new StreamResolution(x));
+
+                    // Order them by resolution then frame rate
+                    allProperties = allProperties.OrderByDescending(x => x.Height * x.Width).ThenByDescending(x => x.FrameRate);
+
+                    //use the biggest and smoothest setting
+                    var encodingProperties = allProperties.First().EncodingProperties;
+
+                    await _mediaCapture.VideoDeviceController.SetMediaStreamPropertiesAsync(MediaStreamType.VideoPreview, encodingProperties);
+
                     await StartPreviewAsync();
                 }
             }
@@ -382,6 +426,7 @@ namespace LinkGen
 
             // Set the preview source in the UI and mirror it if necessary
             PreviewControl.Source = _mediaCapture;
+
             PreviewControl.FlowDirection = _mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
 
             // Start the preview
@@ -395,7 +440,7 @@ namespace LinkGen
             }
 
             // Enable / disable the button depending on the preview state
-            LinkGen.IsEnabled = _isPreviewing;
+            //LinkGen.IsEnabled = _isPreviewing;
         }
 
         /// <summary>
@@ -438,7 +483,7 @@ namespace LinkGen
                 // Allow the device to sleep now that the preview is stopped
                 _displayRequest.RequestRelease();
 
-                LinkGen.IsEnabled = _isPreviewing;
+                //LinkGen.IsEnabled = _isPreviewing;
             });
         }
 
@@ -452,35 +497,73 @@ namespace LinkGen
             // Get information about the preview
             var previewProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview) as VideoEncodingProperties;
 
+
             // Create the video frame to request a SoftwareBitmap preview frame
             var videoFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)previewProperties.Width, (int)previewProperties.Height);
 
             // Capture the preview frame
+            var focusControl = _mediaCapture.VideoDeviceController.FocusControl;
 
-            _mediaCapture.VideoDeviceController.FocusControl.Configure(
+            if (focusControl.Supported)
+            {
+                _mediaCapture.VideoDeviceController.FocusControl.Configure(new FocusSettings { Mode = FocusMode.Auto });
+                await _mediaCapture.VideoDeviceController.FocusControl.FocusAsync();
+            }
 
-new FocusSettings { Mode = FocusMode.Auto });
-            await _mediaCapture.VideoDeviceController.FocusControl.FocusAsync();
+
+            if (_mirroringPreview)
+            {
+                PreviewControl.FlowDirection = !_mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+            }
+
+
+
 
             using (var currentFrame = await _mediaCapture.GetPreviewFrameAsync(videoFrame))
             {
+
                 // Collect the resulting frame
                 SoftwareBitmap previewFrame = currentFrame.SoftwareBitmap;
+
+
+                var file = await _captureFolder.CreateFileAsync("PreviewFrame.jpg", CreationCollisionOption.GenerateUniqueName);
+                await SaveSoftwareBitmapAsync(previewFrame, file);
+
+
+                Debug.WriteLine("Saving preview frame to " + file.Path);
 
 
 
 
 
                 // Show the frame information
-                FrameInfoTextBlock.Text = String.Format("{0}x{1} {2}", previewFrame.PixelWidth, previewFrame.PixelHeight, previewFrame.BitmapPixelFormat);
+                //FrameInfoTextBlock.Text = String.Format("{0}x{1} {2}", previewFrame.PixelWidth, previewFrame.PixelHeight, previewFrame.BitmapPixelFormat);
                 // Create image decoder.
                 //nameInput.Text = Package.Current.InstalledLocation.Path.ToString();
-                
 
- 
-                load_image(previewFrame);
- 
+                if (_displayOrientation == DisplayOrientations.Portrait || _displayOrientation == DisplayOrientations.PortraitFlipped)
+                {
+                    BitmapImage bmpImage = new BitmapImage();
+                    using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+                    {
+                        BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.BmpEncoderId, stream);
+                        encoder.BitmapTransform.Rotation = BitmapRotation.Clockwise90Degrees;
+                        encoder.SetSoftwareBitmap(previewFrame);
+                        await encoder.FlushAsync();
+
+
+                        await bmpImage.SetSourceAsync(stream);
+                    }
+                }
+
+
+
+                Load_image(previewFrame);
+
+
             }
+
+            PreviewControl.FlowDirection = _mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
         }
 
         /// <summary>
@@ -567,7 +650,7 @@ new FocusSettings { Mode = FocusMode.Auto });
         private static async Task SaveSoftwareBitmapAsync(SoftwareBitmap bitmap)
         {
             var file = await Package.Current.InstalledLocation.CreateFileAsync("Photo.jpg", CreationCollisionOption.GenerateUniqueName);
-            
+
             using (var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite))
             {
                 var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, outputStream);
@@ -578,15 +661,46 @@ new FocusSettings { Mode = FocusMode.Auto });
             }
         }
 
+
         /// <summary>
-        /// Applies a basic effect to a Bgra8 SoftwareBitmap in-place
+        /// Saves a SoftwareBitmap to the specified StorageFile
         /// </summary>
-        /// <param name="bitmap">SoftwareBitmap that will receive the effect</param>
- 
+        /// <param name="bitmap">SoftwareBitmap to save</param>
+        /// <param name="file">Target StorageFile to save to</param>
+        /// <returns></returns>
+
+        private static async Task SaveSoftwareBitmapAsync(SoftwareBitmap bitmap, StorageFile file)
+        {
+            using (var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, outputStream);
+
+                // Grab the data from the SoftwareBitmap
+                encoder.SetSoftwareBitmap(bitmap);
+                await encoder.FlushAsync();
+            }
+        }
+
+
 
         #endregion Helper functions 
 
+        private void Flash_Click(object sender, RoutedEventArgs e)
+        {
+            var flashControl = _mediaCapture.VideoDeviceController.FlashControl;
+            var assustantlight = _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported;
 
+            if (flashControl.AssistantLightEnabled == true)
+            {
+                flashControl.AssistantLightEnabled = false;
+                FlashButton.Content = "Flash Off";
+            }
+            else if (flashControl.AssistantLightEnabled == false)
+            {
+                flashControl.AssistantLightEnabled = true;
+                FlashButton.Content = "Flash On";
+            }
 
+        }
     }
 }

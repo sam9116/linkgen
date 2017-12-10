@@ -7,15 +7,15 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=Sam" Version="1.0.3.0" ProcessorArchitecture="x86" />
-  <mp:PhoneIdentity PhoneProductId="9724b72a-0814-4064-8c0a-ea2b929b29b5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F" Version="1.1.20.0" ProcessorArchitecture="x86" />
+  <mp:PhoneIdentity PhoneProductId="e0540f4f-2252-45fe-a967-b197acbc045c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>LinkGen</DisplayName>
-    <PublisherDisplayName>Sam</PublisherDisplayName>
+    <PublisherDisplayName>Vertici Entertainment</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10586.0" MaxVersionTested="10.0.10586.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10586.0" MaxVersionTested="10.0.14295.0" />
     <PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.22929.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.NET.Native.Framework.1.3" MinVersion="1.3.24201.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.NET.Native.Runtime.1.4" MinVersion="1.4.24201.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
@@ -57,6 +57,7 @@
     <build:Item Name="UseDotNetNativeSharedAssemblyFrameworkPackage" Value="True" />
     <build:Item Name="UniversalGenericsOptOut" Value="false" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26906.1" />
+    <build:Item Name="WindowsMobile" Version="10.0.14295.0" />
     <build:Item Name="MakePri.exe" Version="10.0.14295.1000 (rs1_release_prs.160318-1814)" />
   </build:Metadata>
 </Package>

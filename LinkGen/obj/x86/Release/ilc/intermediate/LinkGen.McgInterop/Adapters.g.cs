@@ -19,7 +19,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 // 
 // 1. Public type definitions with interop implementation used by this application including WinRT & COM data structures and P/Invokes.
 // 
-// 2. The 'McgInterop' class containing marshaling code that acts as a bridge from managed code to native code.
+// 2. The '__Interop' class containing marshaling code that acts as a bridge from managed code to native code.
 // 
 // 3. The 'McgNative' class containing marshaling code and native type definitions that call into native code and are called by native code.
 // 
@@ -60,7 +60,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        global::System.Collections.Generic.IReadOnlyList<T> _this,
 	        uint index)
 	    {
-	        EnsureIndexInt32(index);
+	        EnsureIndexInt32(index, _this.Count);
 
 	        try
 	        {
@@ -68,7 +68,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.ArgumentOutOfRangeException ex)
 	        {
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -128,12 +128,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        if (startIndex == count)
 	            return 0;
 
-	        if (startIndex > (uint)count)
-	        {
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index_BOUNDS();
-	        }
-
-	        EnsureIndexInt32(startIndex);
+	        EnsureIndexInt32(startIndex, count);
 
 	        if (items == null)
 	        {
@@ -152,13 +147,21 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	    #region Helpers
 
-	    private static void EnsureIndexInt32(uint index)
+	    private static void EnsureIndexInt32(uint index, int listCapacity)
 	    {
 	        // We use '<=' and not '<' because Int32.MaxValue == index would imply
 	        // that Size > Int32.MaxValue:
-	        if (((uint)System.Int32.MaxValue) <= index)
+	        if (((uint)System.Int32.MaxValue) <= index || index >= (uint)listCapacity)
 	        {
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index_BOUNDS();
+	            global::System.Exception ex = new global::System.ArgumentOutOfRangeException(
+	                "index", 
+	                global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_IndexLargerThanMaxValue)
+	            );
+	            McgMarshal.SetExceptionErrorCode(
+	                ex,
+	                global::__Interop.McgHelpers.__HResults.E_BOUNDS
+	            );
+	            throw ex;
 	        }
 	    }
 
@@ -237,7 +240,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	}
 
-
 	public static class IVectorSharedReferenceTypesRCWAdapter
 	{
 	    public static T Indexer_Get<T>(
@@ -245,7 +247,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        int index)
 	    {
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw new global::System.ArgumentOutOfRangeException("index");
 
 	        return GetAt(_this, (uint)index);
 	    }
@@ -256,7 +258,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        T value)
 	    {
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw new global::System.ArgumentOutOfRangeException("index");
 
 	        SetAt(_this, (uint)index, value);
 	    }
@@ -285,7 +287,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        T item)
 	    {
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw new global::System.ArgumentOutOfRangeException("index");
 
 	        InsertAtHelper(_this, (uint)index, item);
 	    }
@@ -295,7 +297,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        int index)
 	    {
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw new global::System.ArgumentOutOfRangeException("index");
 
 	        RemoveAtHelper(_this, (uint)index);
 	    }
@@ -310,8 +312,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.ArgumentOutOfRangeException("index");
 
 	            throw;
 	        }
@@ -328,8 +330,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.ArgumentOutOfRangeException("index");
 
 	            throw;
 	        }
@@ -381,7 +383,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    {
 	        int count = Count(_this);
 
-	        global::System.Exception error = global::McgInterop.McgHelpers.CheckCopyTo(count, array, arrayIndex);
+	        global::System.Exception error = global::__Interop.McgHelpers.CheckCopyTo(count, array, arrayIndex);
 
 	        if (error != null)
 	        {
@@ -424,8 +426,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.ArgumentOutOfRangeException("index");
 
 	            throw;
 	        }
@@ -441,8 +443,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.ArgumentOutOfRangeException("index");
 
 	            throw;
 	        }
@@ -467,7 +469,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static T GetAt<T>(global::System.Collections.Generic.IList<T> _this, uint index)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_GetAt];
@@ -484,7 +486,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                throw global::System.Runtime.InteropServices.McgMarshal.GetExceptionForHR(result, /* isWinRTScenario = */ true);
 	            }
 
-	            return (T)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(unsafeValue, typeof(T).TypeHandle);
+	            return (T)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(unsafeValue, typeof(T).TypeHandle);
 	        }
 	        finally
 	        {
@@ -495,7 +497,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static void SetAt<T>(global::System.Collections.Generic.IList<T> _this, uint index, T value)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_SetAt];
@@ -503,7 +505,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeValue = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(value, typeof(T).TypeHandle);
+	            unsafeValue = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(value, typeof(T).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, index, (void*)unsafeValue);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -522,7 +524,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static bool IndexOf<T>(global::System.Collections.Generic.IList<T> _this, T item, out uint index)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_IndexOf];
@@ -532,7 +534,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeItem = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(item, typeof(T).TypeHandle);
+	            unsafeItem = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(item, typeof(T).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeItem, &unsafeIndex, &found);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -554,7 +556,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static void InsertAt<T>(global::System.Collections.Generic.IList<T> _this, uint index, T item)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_InsertAt];
@@ -562,7 +564,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeItem = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(item, typeof(T).TypeHandle);
+	            unsafeItem = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(item, typeof(T).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, index, (void*)unsafeItem);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -581,7 +583,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static void RemoveAt<T>(global::System.Collections.Generic.IList<T> _this, uint index)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_RemoveAt];
@@ -599,7 +601,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static uint get_Size<T>(global::System.Collections.Generic.IList<T> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_get_Size];
@@ -620,7 +622,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static void Append<T>(global::System.Collections.Generic.IList<T> _this, T item)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Append];
@@ -628,7 +630,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeItem = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(item, typeof(T).TypeHandle);
+	            unsafeItem = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(item, typeof(T).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeItem);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -647,7 +649,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static void Clear<T>(global::System.Collections.Generic.IList<T> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Clear];
@@ -671,7 +673,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        global::System.Collections.Generic.IList<T> _this,
 	        uint index)
 	    {
-	        EnsureIndexInt32(index);
+	        EnsureIndexInt32(index, _this.Count);
 
 	        try
 	        {
@@ -679,7 +681,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.ArgumentOutOfRangeException ex)
 	        {
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -733,7 +735,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        uint index,
 	        T value)
 	    {
-	        EnsureIndexInt32(index);
+	        EnsureIndexInt32(index, _this.Count);
 
 	        try
 	        {
@@ -741,7 +743,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.ArgumentOutOfRangeException ex)
 	        {
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -752,10 +754,9 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        uint index,
 	        T value)
 	    {
-
 	        // Inserting at an index one past the end of the list is equivalent to appending
 	        // so we need to ensure that we're within (0, count + 1).
-	        EnsureIndexInt32(index);
+	        EnsureIndexInt32(index, _this.Count + 1);
 
 	        try
 	        {
@@ -764,7 +765,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        catch (System.ArgumentOutOfRangeException ex)
 	        {
 	            // Change error code to match what WinRT expects
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -774,7 +775,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        global::System.Collections.Generic.IList<T> _this,
 	        uint index)
 	    {
-	        EnsureIndexInt32(index);
+	        EnsureIndexInt32(index, _this.Count);
 
 	        try
 	        {
@@ -783,7 +784,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        catch (System.ArgumentOutOfRangeException ex)
 	        {
 	            // Change error code to match what WinRT expects
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -807,7 +808,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	            InvalidOperationException ex = new InvalidOperationException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_CannotRemoveFromEmptyCollection));
 
 	            // Change error code to match what WinRT expects
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw ex;
 	        }
 
@@ -857,13 +858,21 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	    // Helpers:
 
-	    private static void EnsureIndexInt32(uint index)
+	    private static void EnsureIndexInt32(uint index, int listCapacity)
 	    {
 	        // We use '<=' and not '<' becasue Int32.MaxValue == index would imply
 	        // that Size > Int32.MaxValue:
-	        if (((uint)System.Int32.MaxValue) <= index)
+	        if (((uint)System.Int32.MaxValue) <= index || index >= (uint)listCapacity)
 	        {
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index_BOUNDS();
+	            global::System.Exception ex = new global::System.ArgumentOutOfRangeException(
+	                "index", 
+	                global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_IndexLargerThanMaxValue)
+	            );
+	            McgMarshal.SetExceptionErrorCode(
+	                ex,
+	                global::__Interop.McgHelpers.__HResults.E_BOUNDS
+	            );
+	            throw ex;
 	        }
 	    }
 
@@ -878,12 +887,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	            return 0;
 	        }
 
-	        if(startIndex > (uint)count)
-	        {
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index_BOUNDS();
-	        }
-
-	        EnsureIndexInt32(startIndex);
+	        EnsureIndexInt32(startIndex, count);
 
 	        if (items == null)
 	        {
@@ -919,7 +923,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static global::Windows.Foundation.Collections.IIterator<T> First<T>(global::System.Collections.Generic.IEnumerable<T> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IEnumerable<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_First];
@@ -936,7 +940,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                throw global::System.Runtime.InteropServices.McgMarshal.GetExceptionForHR(result, /* isWinRTScenario = */ true);
 	            }
 
-	            return (global::Windows.Foundation.Collections.IIterator<T>)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(unsafeIterator, typeof(global::Windows.Foundation.Collections.IIterator<T>).TypeHandle);
+	            return (global::Windows.Foundation.Collections.IIterator<T>)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(unsafeIterator, typeof(global::Windows.Foundation.Collections.IIterator<T>).TypeHandle);
 	        }
 	        finally
 	        {
@@ -1047,7 +1051,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        catch (System.Exception ex)
 	        {
 	            // Translate E_CHANGED_STATE into an InvalidOperationException for an updated enumeration
-	            if (global::McgInterop.McgHelpers.__HResults.E_CHANGED_STATE == ex.HResult)
+	            if (global::__Interop.McgHelpers.__HResults.E_CHANGED_STATE == ex.HResult)
 	            {
 	                throw new InvalidOperationException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_EnumFailedVersion));
 	            }
@@ -1069,7 +1073,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	}
 
 
-
 	public static class IVectorViewSharedReferenceTypesRCWAdapter
 	{
 	    public static T Indexer_Get<T>(
@@ -1077,7 +1080,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        int index)
 	    {
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw new global::System.ArgumentOutOfRangeException("index");
 
 	        return GetAt(_this, (uint)index);
 	    }
@@ -1104,8 +1107,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.ArgumentOutOfRangeException("index");
 
 	            throw;
 	        }
@@ -1136,7 +1139,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        get
 	        {
 	            if (index < 0)
-	                throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	                throw new global::System.ArgumentOutOfRangeException("index");
 
 	            try
 	            {
@@ -1144,8 +1147,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	            }
 	            catch (System.Exception ex)
 	            {
-	                if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                    throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	                if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                    throw new global::System.ArgumentOutOfRangeException("index");
 	                throw;
 	            }
 	        }
@@ -1166,7 +1169,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static T GetAt<T>(global::System.Collections.Generic.IReadOnlyList<T> _this, uint index)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IReadOnlyList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_GetAt];
@@ -1183,7 +1186,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                throw global::System.Runtime.InteropServices.McgMarshal.GetExceptionForHR(result, /* isWinRTScenario = */ true);
 	            }
 
-	            return (T)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(unsafeValue, typeof(T).TypeHandle);
+	            return (T)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(unsafeValue, typeof(T).TypeHandle);
 	        }
 	        finally
 	        {
@@ -1194,7 +1197,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static uint get_Size<T>(global::System.Collections.Generic.IReadOnlyList<T> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IReadOnlyList<T>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_get_Size];
@@ -1224,10 +1227,10 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        {
 	            return _this[key];
 	        }
-	        catch(KeyNotFoundException ex)
+	        catch(global::System.Collections.Generic.KeyNotFoundException ex)
 	        {
 	            // Change error code to match what WinRT expects
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -1284,7 +1287,12 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    {
 	        if (! _this.Remove(key))
 	        {
-	            throw global::McgInterop.Helpers.NewException_CollectionsGeneric_KeyNotFoundException_BOUNDS();
+	            global::System.Exception ex = new global::System.Collections.Generic.KeyNotFoundException();
+	            McgMarshal.SetExceptionErrorCode(
+	                ex,
+	                global::__Interop.McgHelpers.__HResults.E_BOUNDS
+	            );
+	            throw ex;
 	        }
 	    }
 
@@ -1297,7 +1305,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    }
 	}
 
-
 	public sealed class DictionaryKeyCollection<TKey, TValue> : global::System.Collections.Generic.ICollection<TKey>
 	{
 	    private readonly global::System.Collections.Generic.IDictionary<TKey, TValue> dictionary;
@@ -1305,14 +1312,14 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public DictionaryKeyCollection(System.Collections.Generic.IDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary();
+	            throw new global::System.ArgumentNullException("dictionary");
 
 	        this.dictionary = dictionary;
 	    }
 
 	    public void CopyTo(TKey[] array, int index)
 	    {
-	        global::System.Exception error = global::McgInterop.McgHelpers.CheckCopyTo(dictionary.Count, array, index);
+	        global::System.Exception error = global::__Interop.McgHelpers.CheckCopyTo(dictionary.Count, array, index);
 
 	        if (error != null)
 	        {
@@ -1376,7 +1383,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public DictionaryKeyEnumerator(System.Collections.Generic.IDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary();
+	            throw new global::System.ArgumentNullException("dictionary");
 
 	        this.dictionary = dictionary;
 	        this.enumeration = dictionary.GetEnumerator();
@@ -1415,14 +1422,14 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public DictionaryValueCollection(System.Collections.Generic.IDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary();
+	            throw new global::System.ArgumentNullException("dictionary");
 
 	        this.dictionary = dictionary;
 	    }
 
 	    public void CopyTo(TValue[] array, int index)
 	    {
-	        global::System.Exception error = global::McgInterop.McgHelpers.CheckCopyTo(dictionary.Count, array, index);
+	        global::System.Exception error = global::__Interop.McgHelpers.CheckCopyTo(dictionary.Count, array, index);
 
 	        if (error != null)
 	        {
@@ -1489,7 +1496,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public DictionaryValueEnumerator(System.Collections.Generic.IDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary();
+	            throw new global::System.ArgumentNullException("dictionary");
 
 	        this.dictionary = dictionary;
 	        this.enumeration = dictionary.GetEnumerator();
@@ -1530,10 +1537,10 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        {
 	            return _this[key];
 	        }
-	        catch (KeyNotFoundException ex)
+	        catch (global::System.Collections.Generic.KeyNotFoundException ex)
 	        {
 	            // Change error code to match what WinRT expects
-	            McgMarshal.SetExceptionErrorCode(ex, global::McgInterop.McgHelpers.__HResults.E_BOUNDS);
+	            McgMarshal.SetExceptionErrorCode(ex, global::__Interop.McgHelpers.__HResults.E_BOUNDS);
 	            throw;
 	        }
 	    }
@@ -1581,7 +1588,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public ReadOnlyDictionaryKeyCollection(System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary(); 
+	            throw new global::System.ArgumentNullException("dictionary"); 
 
 	        this.dictionary = dictionary;
 	    }
@@ -1590,9 +1597,9 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public void CopyTo(TKey[] array, int index)
 	    {
 	        if (array == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_array();
+	            throw global::__Interop.Helpers.NewException_ArgumentNullException_array();
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw global::__Interop.Helpers.NewException_ArgumentOutOfRangeException_index();
 	        if (array.Length <= index && this.Count > 0)
 	            throw new ArgumentException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_IndexOutOfArrayBounds));
 	        if (array.Length - index < dictionary.Count)
@@ -1635,7 +1642,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public ReadOnlyDictionaryKeyEnumerator(System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary(); 
+	            throw new global::System.ArgumentNullException("dictionary"); 
 
 	        this.dictionary = dictionary;
 	        this.enumeration = dictionary.GetEnumerator();
@@ -1675,7 +1682,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public ReadOnlyDictionaryValueCollection(System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary(); 
+	            throw new global::System.ArgumentNullException("dictionary"); 
 
 	        this.dictionary = dictionary;
 	    }
@@ -1684,9 +1691,9 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public void CopyTo(TValue[] array, int index)
 	    {
 	        if (array == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_array();
+	            throw global::__Interop.Helpers.NewException_ArgumentNullException_array();
 	        if (index < 0)
-	            throw global::McgInterop.Helpers.NewException_ArgumentOutOfRangeException_index();
+	            throw global::__Interop.Helpers.NewException_ArgumentOutOfRangeException_index();
 	        if (array.Length <= index && this.Count > 0)
 	            throw new ArgumentException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_IndexOutOfArrayBounds));
 	        if (array.Length - index < dictionary.Count)
@@ -1733,7 +1740,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public ReadOnlyDictionaryValueEnumerator(System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> dictionary)
 	    {
 	        if (dictionary == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_dictionary(); 
+	            throw new global::System.ArgumentNullException("dictionary");
 
 	        this.dictionary = dictionary;
 	        this.enumeration = dictionary.GetEnumerator();
@@ -1781,7 +1788,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    internal ConstantSplittableMap(global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> data)
 	    {
 	        if (data == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_data();
+	            throw new global::System.ArgumentNullException("data");
 
 	        int count = data.Count;
 
@@ -1829,7 +1836,12 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        if (index < 0)
 	        {
-	            throw new KeyNotFoundException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_KeyNotFound));
+	            global::System.Exception ex = new global::System.Collections.Generic.KeyNotFoundException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_KeyNotFound));
+	            McgMarshal.SetExceptionErrorCode(
+	                ex,
+	                global::__Interop.McgHelpers.__HResults.E_BOUNDS
+	            );
+	            throw ex;
 	        }
 
 	        return items[index].Value;
@@ -1905,7 +1917,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    {
 	        get
 	        {
-	            throw global::McgInterop.Helpers.NewException_NotImplementedException_NYI();
+	            throw new global::System.NotImplementedException("NYI");
 	        }
 	    }
 
@@ -1913,7 +1925,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    {
 	        get
 	        {
-	            throw global::McgInterop.Helpers.NewException_NotImplementedException_NYI();
+	            throw new global::System.NotImplementedException("NYI");
 	        }
 	    }
 
@@ -1986,7 +1998,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	}  // internal ConstantSplittableMap<TKey, TValue>
 
-
 	public static class IMapSharedReferenceTypesRCWAdapter 
 	{
 	    // TValue this[TKey key] { get }
@@ -1994,8 +2005,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	        TKey key)
 	    {
-	        if ((object) key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	        if ((object)key == null)
+	            throw new global::System.ArgumentNullException("key");
 
 	        //Contract.EndContractBlock();
 	        return Lookup(_this, key);
@@ -2007,8 +2018,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        TKey key, 
 	        TValue value)
 	    {
-	        if ((object) key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	        if ((object)key == null)
+	            throw new global::System.ArgumentNullException("key");
 
 	        //Contract.EndContractBlock();
 
@@ -2021,7 +2032,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        )
 	    {
 	        global::System.Collections.Generic.IDictionary<TKey, TValue> dictionary = (System.Collections.Generic.IDictionary<TKey, TValue>)_this;
-	        return new DictionaryKeyCollection<TKey, TValue>(dictionary);
+	        return new global::System.Runtime.InteropServices.WindowsRuntime.DictionaryKeyCollection<TKey, TValue>(dictionary);
 	    }
 
 	    // ICollection<TKey, TValue> Values { get }
@@ -2030,15 +2041,15 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	       )
 	    {
 	        global::System.Collections.Generic.IDictionary<TKey, TValue> dictionary = (System.Collections.Generic.IDictionary<TKey, TValue>)_this;
-	        return new DictionaryValueCollection<TKey, TValue>(dictionary);
+	        return new global::System.Runtime.InteropServices.WindowsRuntime.DictionaryValueCollection<TKey, TValue>(dictionary);
 	    }
 
 	    // bool ContainsKey<TKey, TValue>(TKey key)
 	   public static bool ContainsKey<TKey, TValue>(global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	       TKey key)
 	    {
-	        if ((object) key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	        if ((object)key == null)
+	            throw new global::System.ArgumentNullException("key");
 
 	       return IMapSharedReferenceTypesStubClass.HasKey<TKey, TValue>(_this, key);
 	    }
@@ -2049,8 +2060,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        TKey key, 
 	        TValue value)
 	    {
-	        if ((object) key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	        if ((object)key == null)
+	            throw new global::System.ArgumentNullException("key");
 
 	        if (ContainsKey(_this, key))
 	            throw new ArgumentException(global::Mcg.System.SR.GetString(global::Mcg.System.SR.Excep_AddingDuplicate));
@@ -2064,8 +2075,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    public static bool Remove<TKey, TValue>(global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	        TKey key)
 	    {
-	        if ((object) key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	        if ((object)key == null)
+	            throw new global::System.ArgumentNullException("key");
 
 	        if (!IMapSharedReferenceTypesStubClass.HasKey<TKey, TValue>(_this, key))
 	            return false;
@@ -2077,7 +2088,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
 	                return false;
 
 	            throw;
@@ -2089,8 +2100,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        TKey key, 
 	        out TValue value)
 	    {
-	        if ((object) key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	        if ((object)key == null)
+	            throw new global::System.ArgumentNullException("key");
 
 	        if (!IMapSharedReferenceTypesStubClass.HasKey<TKey, TValue>(_this, key))
 	        {
@@ -2122,8 +2133,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_KeyNotFoundException_Key();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.Collections.Generic.KeyNotFoundException("key");
 	            throw;
 	        }
 	    }
@@ -2171,7 +2182,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	        global::System.Collections.Generic.KeyValuePair<TKey, TValue> item)
 	    {
-	        return global::McgInterop.McgHelpers.MapContains((System.__ComObject)_this, item);
+	        return global::__Interop.McgHelpers.MapContains((System.__ComObject)_this, item);
 	    }
 
 	    public static void CopyTo<TKey, TValue>(
@@ -2179,7 +2190,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        global::System.Collections.Generic.KeyValuePair<TKey, TValue>[] array,
 	        int arrayIndex)
 	    {
-	        global::McgInterop.McgHelpers.CopyMapTo((System.__ComObject)_this, Count(_this), array, arrayIndex);
+	        global::__Interop.McgHelpers.CopyMapTo((System.__ComObject)_this, Count(_this), array, arrayIndex);
 	    }
 
 	    public static bool Remove<TKey, TValue>(
@@ -2205,7 +2216,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	                TKey key)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Lookup];
@@ -2214,7 +2225,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeKey = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(key, typeof(TKey).TypeHandle);
+	            unsafeKey = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(key, typeof(TKey).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeKey, (void*)&unsafeValue);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -2224,7 +2235,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                throw global::System.Runtime.InteropServices.McgMarshal.GetExceptionForHR(result, /* isWinRTScenario = */ true);
 	            }
 
-	            return (TValue)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(unsafeValue, typeof(TValue).TypeHandle);
+	            return (TValue)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(unsafeValue, typeof(TValue).TypeHandle);
 	        }
 	        finally
 	        {
@@ -2236,7 +2247,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static uint get_Size<TKey, TValue>(global::System.Collections.Generic.IDictionary<TKey, TValue> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_get_Size];
@@ -2259,7 +2270,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	                TKey key)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_HasKey];
@@ -2269,7 +2280,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeKey = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(key, typeof(TKey).TypeHandle);
+	            unsafeKey = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(key, typeof(TKey).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeKey, (void*)&unsafeRetVal);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -2296,7 +2307,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                TKey key,
 	                TValue value)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Insert];
@@ -2307,8 +2318,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeKey = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(key, typeof(TKey).TypeHandle);
-	            unsafeValue = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(value, typeof(TValue).TypeHandle);
+	            unsafeKey = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(key, typeof(TKey).TypeHandle);
+	            unsafeValue = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(value, typeof(TValue).TypeHandle);
 
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeKey, (void*)unsafeValue, (void *)&unsafeRetVal);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
@@ -2334,7 +2345,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                global::System.Collections.Generic.IDictionary<TKey, TValue> _this,
 	                TKey key)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Remove];
@@ -2342,7 +2353,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        
 	        try
 	        {
-	            unsafeKey = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(key, typeof(TKey).TypeHandle);
+	            unsafeKey = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(key, typeof(TKey).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeKey);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -2362,7 +2373,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
 	    public static void Clear<TKey, TValue>(global::System.Collections.Generic.IDictionary<TKey, TValue> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Clear];
@@ -2378,7 +2389,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	    }
 
 	}
-
 
 	public static class IMapViewSharedReferenceTypesRCWAdapter 
 	{
@@ -2401,7 +2411,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        TKey key)
 	    {
 	        if ((object)key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	            throw new global::System.ArgumentNullException("key");
 
 
 	        return Lookup(_this, key);
@@ -2413,7 +2423,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        )
 	    {
 	        global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> roDictionary = (System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>)_this;
-	        return new ReadOnlyDictionaryKeyCollection<TKey, TValue>(roDictionary);
+	        return new global::System.Runtime.InteropServices.WindowsRuntime.ReadOnlyDictionaryKeyCollection<TKey, TValue>(roDictionary);
 	    }
 
 	    // IEnumerable<TValue> Values { get }
@@ -2422,7 +2432,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        )
 	    {
 	        global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> roDictionary = (System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>)_this;
-	        return new ReadOnlyDictionaryValueCollection<TKey, TValue>(roDictionary);
+	        return new global::System.Runtime.InteropServices.WindowsRuntime.ReadOnlyDictionaryValueCollection<TKey, TValue>(roDictionary);
 	    }
 
 	    // bool ContainsKey(K key)
@@ -2431,7 +2441,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        TKey key)
 	    {
 	        if ((object)key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	            throw new global::System.ArgumentNullException("key");
 
 	        return IMapViewSharedReferenceTypesStubClass.HasKey(_this, key);
 	    }
@@ -2443,7 +2453,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        out TValue value)
 	    {
 	        if ((object)key == null)
-	            throw global::McgInterop.Helpers.NewException_ArgumentNullException_key();
+	            throw new global::System.ArgumentNullException("key");
 
 	        // It may be faster to call HasKey then Lookup.  On failure, we would otherwise
 	        // throw an exception from Lookup.
@@ -2460,7 +2470,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)  // Still may hit this case due to a race, or a potential bug.
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
 	            {
 	                value = default(TValue);
 	                return false;
@@ -2481,8 +2491,8 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	        }
 	        catch (System.Exception ex)
 	        {
-	            if (global::McgInterop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
-	                throw global::McgInterop.Helpers.NewException_KeyNotFoundException_Key();
+	            if (global::__Interop.McgHelpers.__HResults.E_BOUNDS == ex.HResult)
+	                throw new global::System.Collections.Generic.KeyNotFoundException("key");
 	            throw;
 	        }
 	    }
@@ -2492,16 +2502,16 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	public static unsafe class IMapViewSharedReferenceTypesStubClass
 	{
-		internal const int idx_Lookup = 6;
-		internal const int idx_get_Size = 7;
-		internal const int idx_HasKey = 8;
+	    internal const int idx_Lookup = 6;
+	    internal const int idx_get_Size = 7;
+	    internal const int idx_HasKey = 8;
 
 	    [global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static TValue Lookup<TKey, TValue>(
 	                global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> _this,
 	                TKey key)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_Lookup];
@@ -2510,7 +2520,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeKey = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(key, typeof(TKey).TypeHandle);
+	            unsafeKey = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(key, typeof(TKey).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeKey, (void*)&unsafeValue);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);
@@ -2520,7 +2530,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                throw global::System.Runtime.InteropServices.McgMarshal.GetExceptionForHR(result, /* isWinRTScenario = */ true);
 	            }
 
-	            return (TValue)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(unsafeValue, typeof(TValue).TypeHandle);
+	            return (TValue)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(unsafeValue, typeof(TValue).TypeHandle);
 	        }
 	        finally
 	        {
@@ -2533,7 +2543,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 	    public static uint get_Size<TKey, TValue>(global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> _this)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_get_Size];
@@ -2556,7 +2566,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 	                global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue> _this,
 	                TKey key)
 	    {
-	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+	        global::System.IntPtr unsafeThis = global::System.Runtime.InteropServices.McgMarshal.GetInterface(
 	            (global::System.__ComObject)_this,
 	            typeof(global::System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>).TypeHandle);
 	        global::System.IntPtr target = (*((global::System.IntPtr**)unsafeThis))[idx_HasKey];
@@ -2566,7 +2576,7 @@ namespace System.Runtime.InteropServices.WindowsRuntime
 
 	        try
 	        {
-	            unsafeKey = global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(key, typeof(TKey).TypeHandle);
+	            unsafeKey = global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(key, typeof(TKey).TypeHandle);
 	            int result = Intrinsics.StdCall__int__(target, (void*)unsafeThis, (void*)unsafeKey, (void*)&unsafeRetVal);
 	            global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 	            global::System.GC.KeepAlive(_this);

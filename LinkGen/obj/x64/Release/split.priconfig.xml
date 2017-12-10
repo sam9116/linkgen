@@ -6,7 +6,7 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x64\Release\ilc\resources.pri">
+  <index root="\" startIndexAt="C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\resources.pri">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />

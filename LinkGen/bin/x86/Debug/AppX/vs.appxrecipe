@@ -8,554 +8,565 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>9724b72a-0814-4064-8c0a-ea2b929b29b5</PackageIdentityName>
+    <PackageIdentityName>e0540f4f-2252-45fe-a967-b197acbc045c</PackageIdentityName>
+    <PackageIdentityPublisher>CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Sam\OneDrive\LinkGen\LinkGen\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>CBDAB96D6747998AAF3AD98F471E857D25E5A68F1740C7FDE3BF2C9216CACAC4</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>9724b72a-0814-4064-8c0a-ea2b929b29b5_1.0.0.0_x86__cnj9vj70ehdf8</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>9724b72a-0814-4064-8c0a-ea2b929b29b5_cnj9vj70ehdf8!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>9724b72a-0814-4064-8c0a-ea2b929b29b5</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Sam</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>FE7582B202F9C0D1331A586A35FB4A063F9509468279F74DAA01F697C2C74368</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>28945VerticiEntertainment.LinkGen_1.1.14.0_x86__pp9xyc1r0r456</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>28945VerticiEntertainment.LinkGen_pp9xyc1r0r456!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>28945VerticiEntertainment.LinkGen</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.14.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-04T08:15:59.026</Modified>
+      <Modified>2017-12-10T03:11:21.066</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
-      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\ClrCompression.dll">
-      <PackagePath>ClrCompression.dll</PackagePath>
-      <Modified>2015-11-13T06:40:07.924</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\entrypoint\LinkGen.exe">
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\LinkGen.exe">
       <PackagePath>entrypoint\LinkGen.exe</PackagePath>
-      <Modified>2015-12-04T08:15:58.345</Modified>
+      <Modified>2017-12-10T03:11:20.534</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\LinkGen-Sam_gaming_rig.exe">
-      <PackagePath>LinkGen-Sam_gaming_rig.exe</PackagePath>
-      <Modified>2015-12-04T05:13:52.731</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\LinkGen.exe">
-      <PackagePath>LinkGen.exe</PackagePath>
-      <Modified>2015-12-04T08:15:59.025</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\LinkGen.xr.xml">
-      <PackagePath>LinkGen.xr.xml</PackagePath>
-      <Modified>2015-12-04T05:01:04.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Microsoft.CSharp.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.csharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
       <Modified>2015-11-13T06:39:43.473</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
-      <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.613</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
-      <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.042</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2015-11-13T06:42:47.466</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\resources.pri">
-      <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-04T08:15:58.733</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.AppContext.dll">
-      <PackagePath>System.AppContext.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.226</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
-      <PackagePath>System.Collections.Concurrent.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.443</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Collections.dll">
-      <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.615</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Collections.Immutable.dll">
-      <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.305</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
-      <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.469</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Collections.Specialized.dll">
-      <PackagePath>System.Collections.Specialized.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.533</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
-      <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.295</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.023</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ComponentModel.dll">
-      <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.030</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
-      <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.582</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Core.dll">
       <PackagePath>System.Core.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.043</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Data.Common.dll">
-      <PackagePath>System.Data.Common.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.541</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
-      <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
-      <Modified>2015-11-13T06:39:39.810</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
-      <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.264</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
-      <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.492</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
-      <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.045</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
-      <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.dll">
-      <PackagePath>System.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.064</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
-      <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.987</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
-      <PackagePath>System.Globalization.Calendars.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.425</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Globalization.dll">
-      <PackagePath>System.Globalization.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.611</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
-      <PackagePath>System.Globalization.Extensions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.293</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.Compression.dll">
-      <PackagePath>System.IO.Compression.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.012</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
-      <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.399</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.dll">
-      <PackagePath>System.IO.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.622</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.FileSystem.dll">
-      <PackagePath>System.IO.FileSystem.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.366</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
-      <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.319</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
-      <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.514</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
-      <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.425</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Linq.dll">
-      <PackagePath>System.Linq.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.988</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Linq.Expressions.dll">
-      <PackagePath>System.Linq.Expressions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.519</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Linq.Parallel.dll">
-      <PackagePath>System.Linq.Parallel.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.050</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Linq.Queryable.dll">
-      <PackagePath>System.Linq.Queryable.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.294</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Net.dll">
       <PackagePath>System.Net.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.112</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.Http.dll">
-      <PackagePath>System.Net.Http.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.324</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
-      <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.324</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
-      <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.143</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.Primitives.dll">
-      <PackagePath>System.Net.Primitives.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.285</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.Requests.dll">
-      <PackagePath>System.Net.Requests.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.521</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.Sockets.dll">
-      <PackagePath>System.Net.Sockets.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.504</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
-      <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.150</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Numerics.dll">
       <PackagePath>System.Numerics.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.132</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
-      <PackagePath>System.Numerics.Vectors.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.496</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
-      <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-13T06:39:39.991</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ObjectModel.dll">
-      <PackagePath>System.ObjectModel.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.685</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
-      <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2015-11-13T06:39:39.988</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Private.Networking.dll">
-      <PackagePath>System.Private.Networking.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.667</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
-      <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.720</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Private.Uri.dll">
-      <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2015-11-13T06:39:39.625</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Context.dll">
-      <PackagePath>System.Reflection.Context.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.324</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
-      <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.474</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.dll">
-      <PackagePath>System.Reflection.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.508</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Emit.dll">
-      <PackagePath>System.Reflection.Emit.dll</PackagePath>
-      <Modified>2015-11-13T06:40:07.923</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
-      <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
-      <Modified>2015-11-13T06:40:07.923</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
-      <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
-      <Modified>2015-11-13T06:40:07.921</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
-      <PackagePath>System.Reflection.Extensions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.400</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
-      <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.489</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
-      <PackagePath>System.Reflection.Primitives.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.471</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
-      <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.909</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
-      <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.232</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.dll">
-      <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.541</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
-      <PackagePath>System.Runtime.Extensions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.281</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Handles.dll">
-      <PackagePath>System.Runtime.Handles.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.264</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
-      <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.414</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
-      <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-13T06:39:39.929</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
-      <PackagePath>System.Runtime.Numerics.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.159</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Runtime.Serialization.dll">
       <PackagePath>System.Runtime.Serialization.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.148</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
-      <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.949</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
-      <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.342</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
-      <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.782</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
-      <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.634</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
-      <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.525</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Security.Claims.dll">
-      <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.939</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Security.Principal.dll">
-      <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.993</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.dll">
-      <PackagePath>System.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.168</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
-      <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.357</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
-      <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.370</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
-      <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.387</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
-      <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
-      <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.067</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.ServiceModel.Web.dll">
       <PackagePath>System.ServiceModel.Web.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.179</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
-      <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.589</Modified>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.ServiceModel.dll">
+      <PackagePath>System.ServiceModel.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Text.Encoding.dll">
-      <PackagePath>System.Text.Encoding.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.927</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
-      <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.426</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
-      <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.481</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Threading.dll">
-      <PackagePath>System.Threading.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.864</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
-      <PackagePath>System.Threading.Overlapped.dll</PackagePath>
-      <Modified>2015-11-13T06:39:39.590</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
-      <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.836</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Threading.Tasks.dll">
-      <PackagePath>System.Threading.Tasks.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.562</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
-      <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
-      <Modified>2015-11-13T06:39:42.208</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Threading.Timer.dll">
-      <PackagePath>System.Threading.Timer.dll</PackagePath>
-      <Modified>2015-11-13T06:39:41.888</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Windows.dll">
       <PackagePath>System.Windows.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.197</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.dll">
-      <PackagePath>System.Xml.dll</PackagePath>
-      <Modified>2015-11-13T06:39:40.212</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Xml.Linq.dll">
       <PackagePath>System.Xml.Linq.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.225</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
-      <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
-      <Modified>2015-11-13T06:39:43.514</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Xml.Serialization.dll">
       <PackagePath>System.Xml.Serialization.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.242</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.XDocument.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.Xml.dll">
+      <PackagePath>System.Xml.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.212</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.0\lib\netcore50\System.dll">
+      <PackagePath>System.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.visualbasic\10.0.0\lib\netcore50\Microsoft.VisualBasic.dll">
+      <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.613</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\microsoft.win32.primitives\4.0.0\lib\dotnet\Microsoft.Win32.Primitives.dll">
+      <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.appcontext\4.0.0\lib\netcore50\System.AppContext.dll">
+      <PackagePath>System.AppContext.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.226</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.collections\4.0.10\lib\netcore50\System.Collections.dll">
+      <PackagePath>System.Collections.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.615</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.collections.concurrent\4.0.10\lib\dotnet\System.Collections.Concurrent.dll">
+      <PackagePath>System.Collections.Concurrent.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.443</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.collections.immutable\1.1.37\lib\dotnet\System.Collections.Immutable.dll">
+      <PackagePath>System.Collections.Immutable.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.305</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.collections.nongeneric\4.0.0\lib\dotnet\System.Collections.NonGeneric.dll">
+      <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.469</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.collections.specialized\4.0.0\lib\dotnet\System.Collections.Specialized.dll">
+      <PackagePath>System.Collections.Specialized.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.533</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.componentmodel\4.0.0\lib\netcore50\System.ComponentModel.dll">
+      <PackagePath>System.ComponentModel.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.030</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.componentmodel.annotations\4.0.10\lib\dotnet\System.ComponentModel.Annotations.dll">
+      <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.295</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.componentmodel.eventbasedasync\4.0.10\lib\dotnet\System.ComponentModel.EventBasedAsync.dll">
+      <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.582</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.data.common\4.0.0\lib\dotnet\System.Data.Common.dll">
+      <PackagePath>System.Data.Common.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.541</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.diagnostics.contracts\4.0.0\lib\netcore50\System.Diagnostics.Contracts.dll">
+      <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
+      <Modified>2015-11-13T06:39:39.810</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.diagnostics.debug\4.0.10\lib\netcore50\System.Diagnostics.Debug.dll">
+      <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.264</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.diagnostics.stacktrace\4.0.0\lib\netcore50\System.Diagnostics.StackTrace.dll">
+      <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.492</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.diagnostics.tools\4.0.0\lib\netcore50\System.Diagnostics.Tools.dll">
+      <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.diagnostics.tracing\4.0.20\lib\netcore50\System.Diagnostics.Tracing.dll">
+      <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.dynamic.runtime\4.0.10\lib\netcore50\System.Dynamic.Runtime.dll">
+      <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.987</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.globalization\4.0.10\lib\netcore50\System.Globalization.dll">
+      <PackagePath>System.Globalization.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.611</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.globalization.calendars\4.0.0\lib\netcore50\System.Globalization.Calendars.dll">
+      <PackagePath>System.Globalization.Calendars.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.globalization.extensions\4.0.0\lib\dotnet\System.Globalization.Extensions.dll">
+      <PackagePath>System.Globalization.Extensions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.293</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io\4.0.10\lib\netcore50\System.IO.dll">
+      <PackagePath>System.IO.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.622</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.compression\4.0.0\lib\netcore50\System.IO.Compression.dll">
+      <PackagePath>System.IO.Compression.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.012</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.compression.clrcompression-x86\4.0.0\runtimes\win10-x86\native\ClrCompression.dll">
+      <PackagePath>ClrCompression.dll</PackagePath>
+      <Modified>2015-11-13T06:40:07.924</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.compression.zipfile\4.0.0\lib\dotnet\System.IO.Compression.ZipFile.dll">
+      <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.filesystem\4.0.0\lib\netcore50\System.IO.FileSystem.dll">
+      <PackagePath>System.IO.FileSystem.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.366</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.filesystem.primitives\4.0.0\lib\dotnet\System.IO.FileSystem.Primitives.dll">
+      <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.isolatedstorage\4.0.0\lib\netcore50\System.IO.IsolatedStorage.dll">
+      <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.514</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.io.unmanagedmemorystream\4.0.0\lib\dotnet\System.IO.UnmanagedMemoryStream.dll">
+      <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.linq\4.0.0\lib\netcore50\System.Linq.dll">
+      <PackagePath>System.Linq.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.988</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.linq.expressions\4.0.10\lib\netcore50\System.Linq.Expressions.dll">
+      <PackagePath>System.Linq.Expressions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.519</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.linq.parallel\4.0.0\lib\netcore50\System.Linq.Parallel.dll">
+      <PackagePath>System.Linq.Parallel.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.050</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.linq.queryable\4.0.0\lib\netcore50\System.Linq.Queryable.dll">
+      <PackagePath>System.Linq.Queryable.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.294</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.http\4.0.0\lib\netcore50\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.324</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.http.rtc\4.0.0\lib\netcore50\System.Net.Http.Rtc.dll">
+      <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.324</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.networkinformation\4.0.0\lib\netcore50\System.Net.NetworkInformation.dll">
+      <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.143</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.primitives\4.0.10\lib\netcore50\System.Net.Primitives.dll">
+      <PackagePath>System.Net.Primitives.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.285</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.requests\4.0.10\lib\dotnet\System.Net.Requests.dll">
+      <PackagePath>System.Net.Requests.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.521</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.sockets\4.0.0\lib\netcore50\System.Net.Sockets.dll">
+      <PackagePath>System.Net.Sockets.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.504</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.net.webheadercollection\4.0.0\lib\dotnet\System.Net.WebHeaderCollection.dll">
+      <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.150</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.numerics.vectors\4.1.0\lib\dotnet\System.Numerics.Vectors.dll">
+      <PackagePath>System.Numerics.Vectors.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.496</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.numerics.vectors.windowsruntime\4.0.0\lib\dotnet\System.Numerics.Vectors.WindowsRuntime.dll">
+      <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
+      <Modified>2015-11-13T06:39:39.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.objectmodel\4.0.10\lib\dotnet\System.ObjectModel.dll">
+      <PackagePath>System.ObjectModel.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.685</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.private.datacontractserialization\4.0.0\lib\netcore50\System.Private.DataContractSerialization.dll">
+      <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
+      <Modified>2015-11-13T06:39:39.988</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.private.networking\4.0.0\lib\netcore50\System.Private.Networking.dll">
+      <PackagePath>System.Private.Networking.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.667</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.private.servicemodel\4.0.0\lib\netcore50\System.Private.ServiceModel.dll">
+      <PackagePath>System.Private.ServiceModel.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.720</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.private.uri\4.0.0\lib\netcore50\System.Private.Uri.dll">
+      <PackagePath>System.Private.Uri.dll</PackagePath>
+      <Modified>2015-11-13T06:39:39.625</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection\4.0.10\lib\netcore50\System.Reflection.dll">
+      <PackagePath>System.Reflection.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.508</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.context\4.0.0\lib\netcore50\System.Reflection.Context.dll">
+      <PackagePath>System.Reflection.Context.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.324</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.dispatchproxy\4.0.0\lib\netcore50\System.Reflection.DispatchProxy.dll">
+      <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.474</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.emit\4.0.0\lib\netcore50\System.Reflection.Emit.dll">
+      <PackagePath>System.Reflection.Emit.dll</PackagePath>
+      <Modified>2015-11-13T06:40:07.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.emit.ilgeneration\4.0.0\lib\netcore50\System.Reflection.Emit.ILGeneration.dll">
+      <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
+      <Modified>2015-11-13T06:40:07.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.emit.lightweight\4.0.0\lib\netcore50\System.Reflection.Emit.Lightweight.dll">
+      <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
+      <Modified>2015-11-13T06:40:07.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.extensions\4.0.0\lib\netcore50\System.Reflection.Extensions.dll">
+      <PackagePath>System.Reflection.Extensions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.400</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.metadata\1.0.22\lib\dotnet\System.Reflection.Metadata.dll">
+      <PackagePath>System.Reflection.Metadata.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.primitives\4.0.0\lib\netcore50\System.Reflection.Primitives.dll">
+      <PackagePath>System.Reflection.Primitives.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.471</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.reflection.typeextensions\4.0.0\lib\netcore50\System.Reflection.TypeExtensions.dll">
+      <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.909</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.resources.resourcemanager\4.0.0\lib\netcore50\System.Resources.ResourceManager.dll">
+      <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.232</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime\4.0.20\lib\netcore50\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.541</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.extensions\4.0.10\lib\netcore50\System.Runtime.Extensions.dll">
+      <PackagePath>System.Runtime.Extensions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.281</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.handles\4.0.0\lib\netcore50\System.Runtime.Handles.dll">
+      <PackagePath>System.Runtime.Handles.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.264</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.interopservices\4.0.20\lib\netcore50\System.Runtime.InteropServices.dll">
+      <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.414</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.interopservices.windowsruntime\4.0.0\lib\netcore50\System.Runtime.InteropServices.WindowsRuntime.dll">
+      <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
+      <Modified>2015-11-13T06:39:39.929</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.numerics\4.0.0\lib\netcore50\System.Runtime.Numerics.dll">
+      <PackagePath>System.Runtime.Numerics.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.159</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.serialization.json\4.0.0\lib\netcore50\System.Runtime.Serialization.Json.dll">
+      <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.949</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.serialization.primitives\4.0.10\lib\dotnet\System.Runtime.Serialization.Primitives.dll">
+      <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.342</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.serialization.xml\4.0.10\lib\netcore50\System.Runtime.Serialization.Xml.dll">
+      <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.782</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.windowsruntime\4.0.10\lib\netcore50\System.Runtime.WindowsRuntime.dll">
+      <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.runtime.windowsruntime.ui.xaml\4.0.0\lib\netcore50\System.Runtime.WindowsRuntime.UI.Xaml.dll">
+      <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.525</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.security.claims\4.0.0\lib\dotnet\System.Security.Claims.dll">
+      <PackagePath>System.Security.Claims.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.939</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.security.principal\4.0.0\lib\netcore50\System.Security.Principal.dll">
+      <PackagePath>System.Security.Principal.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.993</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.servicemodel.duplex\4.0.0\lib\netcore50\System.ServiceModel.Duplex.dll">
+      <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.357</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.servicemodel.http\4.0.10\lib\netcore50\System.ServiceModel.Http.dll">
+      <PackagePath>System.ServiceModel.Http.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.servicemodel.nettcp\4.0.0\lib\netcore50\System.ServiceModel.NetTcp.dll">
+      <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.387</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.servicemodel.primitives\4.0.0\lib\netcore50\System.ServiceModel.Primitives.dll">
+      <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.servicemodel.security\4.0.0\lib\netcore50\System.ServiceModel.Security.dll">
+      <PackagePath>System.ServiceModel.Security.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.text.encoding\4.0.10\lib\netcore50\System.Text.Encoding.dll">
+      <PackagePath>System.Text.Encoding.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.927</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.text.encoding.codepages\4.0.0\lib\dotnet\System.Text.Encoding.CodePages.dll">
+      <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
+      <Modified>2015-11-13T06:39:40.589</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.text.encoding.extensions\4.0.10\lib\netcore50\System.Text.Encoding.Extensions.dll">
+      <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.text.regularexpressions\4.0.10\lib\dotnet\System.Text.RegularExpressions.dll">
+      <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.481</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.threading\4.0.10\lib\netcore50\System.Threading.dll">
+      <PackagePath>System.Threading.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.864</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.threading.overlapped\4.0.0\lib\netcore50\System.Threading.Overlapped.dll">
+      <PackagePath>System.Threading.Overlapped.dll</PackagePath>
+      <Modified>2015-11-13T06:39:39.590</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.threading.tasks\4.0.10\lib\netcore50\System.Threading.Tasks.dll">
+      <PackagePath>System.Threading.Tasks.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.threading.tasks.dataflow\4.5.25\lib\dotnet\System.Threading.Tasks.Dataflow.dll">
+      <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.836</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.threading.tasks.parallel\4.0.0\lib\netcore50\System.Threading.Tasks.Parallel.dll">
+      <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
+      <Modified>2015-11-13T06:39:42.208</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.threading.timer\4.0.0\lib\netcore50\System.Threading.Timer.dll">
+      <PackagePath>System.Threading.Timer.dll</PackagePath>
+      <Modified>2015-11-13T06:39:41.888</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.xml.readerwriter\4.0.10\lib\dotnet\System.Xml.ReaderWriter.dll">
+      <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
+      <Modified>2015-11-13T06:39:43.514</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.xml.xdocument\4.0.10\lib\dotnet\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
       <Modified>2015-11-13T06:39:42.868</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.xml.xmldocument\4.0.0\lib\dotnet\System.Xml.XmlDocument.dll">
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
       <Modified>2015-11-13T06:39:39.612</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
+    <AppxPackagedFile Include="C:\Users\Sam\.nuget\packages\system.xml.xmlserializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-11-13T06:39:40.621</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\WinMetadata\Windows-Sam_gaming_rig.winmd">
-      <PackagePath>WinMetadata\Windows-Sam_gaming_rig.winmd</PackagePath>
-      <Modified>2015-11-13T06:24:44.354</Modified>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2015-11-13T06:42:47.466</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2017-12-03T02:38:27.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-03T02:41:05.017</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-03T02:36:19.574</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-03T02:37:31.442</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-03T02:38:07.169</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-03T02:41:46.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-03T02:42:10.017</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\LinkGen.xr.xml">
+      <PackagePath>LinkGen.xr.xml</PackagePath>
+      <Modified>2017-12-10T03:11:20.358</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2015-11-13T06:24:44.354</Modified>
+      <Modified>2017-11-02T23:35:54.537</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-10T03:11:20.918</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Debug\Core\LinkGen.exe">
+      <PackagePath>LinkGen.exe</PackagePath>
+      <Modified>2017-12-10T03:11:21.063</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.0\">
-      <Name>Microsoft.NET.CoreRuntime.1.0</Name>
-      <Version>1.0.23302.0</Version>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\">
+      <Name>Microsoft.NET.CoreRuntime.1.1</Name>
+      <Version>1.1.25305.1</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.0, MinVersion = 1.0.23302.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.0\.\AppX\ARM\Microsoft.NET.CoreRuntime.1.0.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.25305.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\.\AppX\ARM\Microsoft.NET.CoreRuntime.1.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.0\">
-      <Name>Microsoft.NET.CoreRuntime.1.0</Name>
-      <Version>1.0.23302.0</Version>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\">
+      <Name>Microsoft.NET.CoreRuntime.1.1</Name>
+      <Version>1.1.25305.1</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.0, MinVersion = 1.0.23302.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.0\.\AppX\x64\Microsoft.NET.CoreRuntime.1.0.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.25305.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\.\AppX\x64\Microsoft.NET.CoreRuntime.1.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.0\">
-      <Name>Microsoft.NET.CoreRuntime.1.0</Name>
-      <Version>1.0.23302.0</Version>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\">
+      <Name>Microsoft.NET.CoreRuntime.1.1</Name>
+      <Version>1.1.25305.1</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.0, MinVersion = 1.0.23302.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.0\.\AppX\x86\Microsoft.NET.CoreRuntime.1.0.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.25305.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\.\AppX\x86\Microsoft.NET.CoreRuntime.1.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.22929.0</Version>
+      <Version>14.0.25547.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.22929.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.22929.0</Version>
+      <Version>14.0.25547.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.25547.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.22929.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.22929.0</Version>
+      <Version>14.0.25547.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.22929.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>

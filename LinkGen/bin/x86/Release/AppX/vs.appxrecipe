@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>9724b72a-0814-4064-8c0a-ea2b929b29b5</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Sam</PackageIdentityPublisher>
+    <PackageIdentityName>e0540f4f-2252-45fe-a967-b197acbc045c</PackageIdentityName>
+    <PackageIdentityPublisher>CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Sam\OneDrive\LinkGen\LinkGen\obj\x86\Release\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,55 +19,55 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>BD572DEC72420DB6131E0D978E0D9CAE6123B8B659860AB436B383DEED4C1F4B</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>28945VerticiEntertainment.LinkGen_1.0.3.0_x86__cnj9vj70ehdf8</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>28945VerticiEntertainment.LinkGen_cnj9vj70ehdf8!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>DC5D29A85C45D8615A56A7A49D1CBAB18011B4F916A3B6477AF556F96AFCFE53</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>28945VerticiEntertainment.LinkGen_1.1.20.0_x86__pp9xyc1r0r456</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>28945VerticiEntertainment.LinkGen_pp9xyc1r0r456!App</RegisteredUserModeAppID>
     <RegisteredPackageID>28945VerticiEntertainment.LinkGen</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Sam</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.3.0</RegisteredVersion>
+    <RegisteredPackagePublisher>CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.20.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-02T22:14:57.490</Modified>
+      <Modified>2017-12-10T06:11:19.195</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:38:27.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:41:05.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:36:19.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:37:31.442</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:38:07.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:41:46.768</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2017-12-03T02:42:10.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
@@ -75,20 +75,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\LinkGen.dll">
       <PackagePath>LinkGen.dll</PackagePath>
-      <Modified>2017-12-02T22:14:57.315</Modified>
+      <Modified>2017-12-10T06:11:19.009</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\LinkGen.exe">
       <PackagePath>LinkGen.exe</PackagePath>
-      <Modified>2017-12-02T22:14:57.468</Modified>
+      <Modified>2017-12-10T06:11:19.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\LinkGen.pdb">
       <PackagePath>LinkGen.pdb</PackagePath>
-      <Modified>2017-12-02T22:14:57.456</Modified>
+      <Modified>2017-12-10T06:11:19.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\OneDrive\LinkGen\LinkGen\bin\x86\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-02T22:12:34.151</Modified>
+      <Modified>2017-12-10T06:10:59.183</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
