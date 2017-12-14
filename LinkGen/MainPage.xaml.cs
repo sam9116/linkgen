@@ -27,6 +27,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.Storage.Streams;
 using System.Collections.Generic;
 using SDKTemplate;
+using System.IO;
 
 
 
@@ -45,8 +46,9 @@ namespace LinkGen
     {
         OcrEngine ocrEngine;
         private readonly DisplayInformation _displayInformation = DisplayInformation.GetForCurrentView();
-        private DisplayOrientations _displayOrientation = DisplayOrientations.Portrait;
-
+        private DisplayOrientations _displayOrientation = DisplayOrientations.Landscape;
+        urlextension r = new urlextension();
+        bool Save = false;
         // Rotation metadata to apply to the preview stream (MF_MT_VIDEO_ROTATION)
         // Reference: http://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868174.aspx
         private static readonly Guid RotationKey = new Guid("C380465D-2271-428C-9B83-ECEA3B4A85C1");
@@ -71,7 +73,7 @@ namespace LinkGen
 
         private StorageFolder _captureFolder = null;
 
-
+        IEnumerable<StreamResolution> allPreviewProperties;
 
         #region Constructor, lifecycle and navigation
         public MainPage()
@@ -130,7 +132,6 @@ namespace LinkGen
             Uri link = new Uri(nameInput.Text, UriKind.Absolute);
 
             await Launcher.LaunchUriAsync(link);
-            await CleanupCameraAsync();
 
         }
 
@@ -139,45 +140,42 @@ namespace LinkGen
 
             listofurl.Items.Clear();
 
-
-
-
-
-
             OcrResult result = await ocrEngine.RecognizeAsync(bitmap);
 
             string[] ssize = result.Text.Split(' ');
             foreach (string s in ssize)
             {
-                if (s.Contains("http://") || s.Contains("https://") || s.Contains(".com") || s.Contains(".ca") || s.Contains(".org") || s.Contains(".COM") || s.Contains(".CA") || s.Contains(".ORG"))
+                foreach (string c in r.knownextensions)
                 {
-                    //filter = s;
+                    if (s.Contains(c))
+                    {
+                        //filter = s;
 
-                    ListViewItem item = new ListViewItem();
-                    Button gobutton = new Button();
-                    TextBox urlbox = new TextBox();
-                    StackPanel holder = new StackPanel();
-                    holder.Orientation = Orientation.Horizontal;
+                        ListViewItem item = new ListViewItem();
+                        Button gobutton = new Button();
+                        TextBox urlbox = new TextBox();
+                        StackPanel holder = new StackPanel();
+                        holder.Orientation = Orientation.Horizontal;
 
-                    gobutton.Content = "Go";
-                    gobutton.Click += Button_clicked;
-                    gobutton.HorizontalAlignment = HorizontalAlignment.Right;
+                        gobutton.Content = "Go";
+                        gobutton.Click += Button_clicked;
+                        gobutton.HorizontalAlignment = HorizontalAlignment.Right;
 
 
-                    urlbox.Margin = (new Thickness(3));
-                    urlbox.MaxWidth = 300;
+                        urlbox.Margin = (new Thickness(3));
+                        urlbox.MaxWidth = 300;
 
-                    urlbox.Text = s;
-                    urlbox.KeyDown += Enter_press;
+                        urlbox.Text = s;
+                        urlbox.KeyDown += Enter_press;
 
-                    holder.Children.Add(gobutton);
-                    holder.Children.Add(urlbox);
+                        holder.Children.Add(gobutton);
+                        holder.Children.Add(urlbox);
 
-                    item.Content = holder;
-                    listofurl.Items.Add(item);
-                    //inputButton.Content = "Go";
+                        item.Content = holder;
+                        listofurl.Items.Add(item);
+                        //inputButton.Content = "Go";
+                    }
                 }
-
             }
             // Display recognized text.
             // nameInput.Text = filter;
@@ -193,6 +191,7 @@ namespace LinkGen
 
                 await CleanupCameraAsync();
 
+                _systemMediaControls.PropertyChanged -= SystemMediaControls_PropertyChanged;
                 _displayInformation.OrientationChanged -= DisplayInformation_OrientationChanged;
 
                 deferral.Complete();
@@ -208,6 +207,7 @@ namespace LinkGen
                 // Populate orientation variables with the current state and register for future changes
                 _displayOrientation = _displayInformation.CurrentOrientation;
                 _displayInformation.OrientationChanged += DisplayInformation_OrientationChanged;
+                _systemMediaControls.PropertyChanged += SystemMediaControls_PropertyChanged;
 
                 await InitializeCameraAsync();
             }
@@ -227,8 +227,8 @@ namespace LinkGen
                 StatusBar statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
                 await statusBar.HideAsync();
             }
-
             await InitializeCameraAsync();
+            
             if (_isPreviewing)
             {
                 await GetPreviewFrameAsSoftwareBitmapAsync();
@@ -273,6 +273,10 @@ namespace LinkGen
                     else if (!_isInitialized)
                     {
                         await InitializeCameraAsync();
+                    }
+                    else if (_isInitialized)
+                    {
+                        Debug.WriteLine("Camera is already initialized");
                     }
                 }
             });
@@ -363,6 +367,11 @@ namespace LinkGen
                 {
                     Debug.WriteLine("The app was denied access to the camera");
                 }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e.ToString());
+                    await CleanupCameraAsync();
+                }
 
                 // If initialization succeeded, start the preview
                 if (_isInitialized)
@@ -392,18 +401,7 @@ namespace LinkGen
                             FlashButton.IsEnabled = true;
                         }
                     }
-
-
-                    // Query all properties of the device
-                    IEnumerable<StreamResolution> allProperties = _mediaCapture.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.VideoPreview).Select(x => new StreamResolution(x));
-
-                    // Order them by resolution then frame rate
-                    allProperties = allProperties.OrderByDescending(x => x.Height * x.Width).ThenByDescending(x => x.FrameRate);
-
-                    //use the biggest and smoothest setting
-                    var encodingProperties = allProperties.First().EncodingProperties;
-
-                    await _mediaCapture.VideoDeviceController.SetMediaStreamPropertiesAsync(MediaStreamType.VideoPreview, encodingProperties);
+                    allPreviewProperties = _mediaCapture.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.VideoPreview).Select(x => new StreamResolution(x));
 
                     await StartPreviewAsync();
                 }
@@ -460,10 +458,27 @@ namespace LinkGen
                 rotationDegrees = (360 - rotationDegrees) % 360;
             }
 
+            // Query all properties of the device 
+            
+            //no 16:9 frames, they're a waste of space
+
+            allPreviewProperties = allPreviewProperties.OrderByDescending(x => x.Height * x.Width);
+
+
+            List<StreamResolution> r = allPreviewProperties.ToList();
+            r.RemoveAll(x => x.AspectRatio>1.5);
+            // Order them by resolution then frame rate
+            
+
+            await _mediaCapture.SetEncodingPropertiesAsync(MediaStreamType.VideoPreview, r.First().EncodingProperties, null);
+            await _mediaCapture.VideoDeviceController.SetMediaStreamPropertiesAsync(MediaStreamType.VideoPreview, r.First().EncodingProperties);
             // Add rotation metadata to the preview stream to make sure the aspect ratio / dimensions match when rendering and getting preview frames
             var props = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview);
             props.Properties.Add(RotationKey, rotationDegrees);
+
+
             await _mediaCapture.SetEncodingPropertiesAsync(MediaStreamType.VideoPreview, props, null);
+            //await _mediaCapture.SetEncodingPropertiesAsync(MediaStreamType.Photo, props_photo, null);
         }
 
         /// <summary>
@@ -497,9 +512,12 @@ namespace LinkGen
             // Get information about the preview
             var previewProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview) as VideoEncodingProperties;
 
-
+           
             // Create the video frame to request a SoftwareBitmap preview frame
             var videoFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)previewProperties.Width, (int)previewProperties.Height);
+
+            // Disable tapped control on preview element so User won't overload the phototaking operation
+            PreviewControl.Tapped -= GetPreviewFrameButton_Tapped;
 
             // Capture the preview frame
             var focusControl = _mediaCapture.VideoDeviceController.FocusControl;
@@ -511,59 +529,55 @@ namespace LinkGen
             }
 
 
-            if (_mirroringPreview)
+            VideoFrame r = await _mediaCapture.GetPreviewFrameAsync(videoFrame);
+
+
+
+
+
+            // Get the SoftwareBitmap representation of the file
+            SoftwareBitmap previewFrame = r.SoftwareBitmap;
+
+            BitmapImage bmpImage = new BitmapImage();
+            using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
             {
-                PreviewControl.FlowDirection = !_mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-            }
-
-
-
-
-            using (var currentFrame = await _mediaCapture.GetPreviewFrameAsync(videoFrame))
-            {
-
-                // Collect the resulting frame
-                SoftwareBitmap previewFrame = currentFrame.SoftwareBitmap;
-
-
-                var file = await _captureFolder.CreateFileAsync("PreviewFrame.jpg", CreationCollisionOption.GenerateUniqueName);
-                await SaveSoftwareBitmapAsync(previewFrame, file);
-
-
-                Debug.WriteLine("Saving preview frame to " + file.Path);
-
-
-
-
-
-                // Show the frame information
-                //FrameInfoTextBlock.Text = String.Format("{0}x{1} {2}", previewFrame.PixelWidth, previewFrame.PixelHeight, previewFrame.BitmapPixelFormat);
-                // Create image decoder.
-                //nameInput.Text = Package.Current.InstalledLocation.Path.ToString();
-
-                if (_displayOrientation == DisplayOrientations.Portrait || _displayOrientation == DisplayOrientations.PortraitFlipped)
+                BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.BmpEncoderId, stream);
+                if(_displayOrientation == DisplayOrientations.Portrait)
                 {
-                    BitmapImage bmpImage = new BitmapImage();
-                    using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
-                    {
-                        BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.BmpEncoderId, stream);
-                        encoder.BitmapTransform.Rotation = BitmapRotation.Clockwise90Degrees;
-                        encoder.SetSoftwareBitmap(previewFrame);
-                        await encoder.FlushAsync();
+                    encoder.BitmapTransform.Rotation = BitmapRotation.Clockwise90Degrees;
+                }
+                else if (_displayOrientation == DisplayOrientations.LandscapeFlipped)
+                {
+                    encoder.BitmapTransform.Rotation = BitmapRotation.Clockwise180Degrees;
+                }
+                else if (_displayOrientation == DisplayOrientations.PortraitFlipped)
+                {
+                    encoder.BitmapTransform.Rotation = BitmapRotation.Clockwise270Degrees;
+                }
 
+                encoder.SetSoftwareBitmap(previewFrame);
+                await encoder.FlushAsync();
 
-                        await bmpImage.SetSourceAsync(stream);
-                    }
+                BitmapDecoder rdecoder = await BitmapDecoder.CreateAsync(stream);
+                SoftwareBitmap rotatedframe = await rdecoder.GetSoftwareBitmapAsync();
+
+                if (Save)
+                {
+                    var file = await _captureFolder.CreateFileAsync("PreviewFrame.jpg", CreationCollisionOption.GenerateUniqueName);
+                    await SaveSoftwareBitmapAsync(rotatedframe, file);
+                    Debug.WriteLine("Saving preview frame to " + file.Path);
                 }
 
 
+                Load_image(rotatedframe);
 
-                Load_image(previewFrame);
-
+                PreviewControl.Tapped += GetPreviewFrameButton_Tapped;
+                Debug.WriteLine("Prewview Tap restored");
 
             }
+            
 
-            PreviewControl.FlowDirection = _mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+            
         }
 
         /// <summary>
@@ -681,6 +695,11 @@ namespace LinkGen
             }
         }
 
+        private async void OnPageUnloaded(object sender, RoutedEventArgs e)
+        {
+            await CleanupCameraAsync();
+        }
+
 
 
         #endregion Helper functions 
@@ -689,17 +708,16 @@ namespace LinkGen
         {
             var flashControl = _mediaCapture.VideoDeviceController.FlashControl;
             var assustantlight = _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported;
+            flashControl.AssistantLightEnabled = !flashControl.AssistantLightEnabled;
+            FlashButton.Content = flashControl.AssistantLightEnabled ? "Flash On" : "Flash Off";
 
-            if (flashControl.AssistantLightEnabled == true)
-            {
-                flashControl.AssistantLightEnabled = false;
-                FlashButton.Content = "Flash Off";
-            }
-            else if (flashControl.AssistantLightEnabled == false)
-            {
-                flashControl.AssistantLightEnabled = true;
-                FlashButton.Content = "Flash On";
-            }
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            Save = !Save;
+
+            SaveButton.Content = Save ? "Save On" : "Save Off";
 
         }
     }

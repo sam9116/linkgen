@@ -210,3 +210,4 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Debug\qualifiers.txt
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Debug\LinkGen.csprojResolveAssemblyReference.cache

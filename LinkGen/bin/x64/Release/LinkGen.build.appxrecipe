@@ -52,8 +52,8 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\clrcompression.dll">
-      <PackagePath>clrcompression.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\ClrCompression.dll">
+      <PackagePath>ClrCompression.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\LinkGen.dll">
       <PackagePath>LinkGen.dll</PackagePath>

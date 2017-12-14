@@ -258,7 +258,8 @@
 
 
         <StackPanel VerticalAlignment="Top" Canvas.ZIndex="2">
-            <Button x:Name="FlashButton" Click="Flash_Click" IsEnabled="False" Margin="10,10,10,10" Content="Flash" FontFamily="Segoe" Background="White"/>
+            <Button x:Name="FlashButton" Click="Flash_Click" IsEnabled="False" Margin="10" Content="Flash Off" FontFamily="Segoe" Background="White"/>
+            <Button x:Name="SaveButton" Click="Save_Click" IsEnabled="True" Margin="10" FontSize="{Binding Path=FontSize,ElementName=FlashButton}" Width="{Binding Path=ActualWidth, ElementName=FlashButton}" Content="Save Off"  FontFamily="Segoe" Background="White"></Button>
         </StackPanel>
 
 

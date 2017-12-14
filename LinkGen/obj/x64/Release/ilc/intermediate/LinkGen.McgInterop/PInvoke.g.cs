@@ -186,9 +186,9 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-errorhandling-l1-1-0.dll'
+	/// P/Invoke class for module 'api-ms-win-core-errorhandling-l1-1-1.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_0_dll
+	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_1_dll
 	{
 		// Signature, GetLastError, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -199,7 +199,7 @@ namespace __Interop
 			int unsafe___value;
 			// Marshalling
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_errorhandling_l1_1_0_dll_PInvokes.GetLastError();
+			unsafe___value = global::__Interop.api_ms_win_core_errorhandling_l1_1_1_dll_PInvokes.GetLastError();
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			// Return
 			return unsafe___value;
@@ -228,9 +228,9 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-localization-l1-2-0.dll'
+	/// P/Invoke class for module 'api-ms-win-core-localization-l1-2-1.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_localization_l1_2_0_dll
+	public unsafe static partial class api_ms_win_core_localization_l1_2_1_dll
 	{
 		// Signature, IsValidLocaleName, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -241,7 +241,7 @@ namespace __Interop
 			int unsafe___value;
 			// Marshalling
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.IsValidLocaleName(((ushort*)lpLocaleName));
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.IsValidLocaleName(((ushort*)lpLocaleName));
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			// Return
 			return unsafe___value;
@@ -259,7 +259,7 @@ namespace __Interop
 			int unsafe___value;
 			// Marshalling
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.ResolveLocaleName(
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.ResolveLocaleName(
 								((ushort*)lpNameToResolve), 
 								((ushort*)lpLocaleName), 
 								cchLocaleName
@@ -281,7 +281,7 @@ namespace __Interop
 			int unsafe___value;
 			// Marshalling
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.GetCPInfoExW(
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.GetCPInfoExW(
 								CodePage, 
 								dwFlags, 
 								((global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages*)lpCPInfoEx)
@@ -426,10 +426,10 @@ namespace __Interop
 					global::System.IntPtr* commonStub);
 	}
 
-	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_0_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_1_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-errorhandling-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-errorhandling-l1-1-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int GetLastError();
 	}
 
@@ -440,21 +440,21 @@ namespace __Interop
 		public extern static int RoInitialize(uint initType);
 	}
 
-	public unsafe static partial class api_ms_win_core_localization_l1_2_0_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_localization_l1_2_1_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int IsValidLocaleName(ushort* lpLocaleName);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int ResolveLocaleName(
 					ushort* lpNameToResolve, 
 					ushort* lpLocaleName, 
 					int cchLocaleName);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int GetCPInfoExW(
 					uint CodePage, 
 					uint dwFlags, 

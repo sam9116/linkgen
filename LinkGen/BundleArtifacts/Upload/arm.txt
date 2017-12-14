@@ -1,2 +1,2 @@
-MainPackage=C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\Upload\LinkGen_1.1.0.0_ARM.appx
-SymbolPackage=C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\Upload\LinkGen_1.1.0.0\LinkGen_1.1.0.0_ARM.appxsym
+MainPackage=C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\Upload\LinkGen_1.2.2.0_ARM.appx
+SymbolPackage=C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\Upload\LinkGen_1.2.2.0\LinkGen_1.2.2.0_ARM.appxsym

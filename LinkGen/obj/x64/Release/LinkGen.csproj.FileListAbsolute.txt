@@ -418,3 +418,4 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\ilc\intermediate\sgarg
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll.ILTransformTask.repro
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.pdb
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\LinkGen.csprojResolveAssemblyReference.cache

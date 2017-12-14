@@ -1,0 +1,1 @@
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\LinkGen.csproj;arm

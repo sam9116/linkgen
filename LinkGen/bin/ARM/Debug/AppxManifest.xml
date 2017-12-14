@@ -7,15 +7,15 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F" Version="1.1.19.0" ProcessorArchitecture="arm" />
-  <mp:PhoneIdentity PhoneProductId="e0540f4f-2252-45fe-a967-b197acbc045c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F" Version="1.1.0.0" ProcessorArchitecture="arm" />
+  <mp:PhoneIdentity PhoneProductId="6c5b8445-34fe-4381-8e2a-c932615c6c7d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>LinkGen</DisplayName>
     <PublisherDisplayName>Vertici Entertainment</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10586.0" MaxVersionTested="10.0.14295.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.15063.0" />
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
@@ -28,30 +28,27 @@
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="portrait" />
           <uap:Rotation Preference="landscape" />
-          <uap:Rotation Preference="portraitFlipped" />
-          <uap:Rotation Preference="landscapeFlipped" />
         </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
-    <Capability Name="privateNetworkClientServer" />
-    <Capability Name="internetClientServer" />
+    <Capability Name="internetClient" />
     <uap:Capability Name="picturesLibrary" />
-    <DeviceCapability Name="webcam" />
     <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="15.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2017" />
     <build:Item Name="OperatingSystem" Version="10.0.16299.15 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.26906.1" />
-    <build:Item Name="ProjectGUID" Value="{2F42E782-BFBE-4AC1-BF33-BD2D01F5910F}" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.27128.1" />
+    <build:Item Name="ProjectGUID" Value="{2874B8B2-79F8-43CF-95BA-417FB7487A71}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26906.1" />
-    <build:Item Name="WindowsMobile" Version="10.0.14295.0" />
-    <build:Item Name="MakePri.exe" Version="10.0.14295.1000 (rs1_release_prs.160318-1814)" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.27128.1" />
+    <build:Item Name="WindowsMobile" Version="10.0.15063.0" />
+    <build:Item Name="MakePri.exe" Version="10.0.15063.674 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

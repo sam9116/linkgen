@@ -6,7 +6,7 @@
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\filemap.pri"			"resources.pri"
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\LinkGen.exe"			"LinkGen.exe"
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\LinkGen.dll"			"LinkGen.dll"
-"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\clrcompression.dll"			"clrcompression.dll"
+"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\ClrCompression.dll"			"ClrCompression.dll"
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\Assets\Wide310x150Logo.scale-200.png"			"Assets\Wide310x150Logo.scale-200.png"
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\Assets\StoreLogo.png"			"Assets\StoreLogo.png"
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\PackageLayout\Assets\Square44x44Logo.targetsize-24_altform-unplated.png"			"Assets\Square44x44Logo.targetsize-24_altform-unplated.png"
