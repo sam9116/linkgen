@@ -28,7 +28,6 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\resources.pri
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\SafeTypes.g.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\ilc\SharedStubs.g.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\LinkGen.build.appxrecipe
-C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\Upload\LinkGen.build.appxrecipe
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\Microsoft.CSharp.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\System.ComponentModel.DataAnnotations.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Release\System.Core.dll

@@ -462,7 +462,7 @@ namespace LinkGen
             
             //no 16:9 frames, they're a waste of space
 
-            allPreviewProperties = allPreviewProperties.OrderByDescending(x => x.Height * x.Width);
+            allPreviewProperties = allPreviewProperties.OrderByDescending(x => x.Height * x.Width).OrderByDescending(x=>x.FrameRate);
 
 
             List<StreamResolution> r = allPreviewProperties.ToList();
