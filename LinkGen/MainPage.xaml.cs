@@ -527,12 +527,16 @@ namespace LinkGen
                 _mediaCapture.VideoDeviceController.FocusControl.Configure(new FocusSettings { Mode = FocusMode.Auto });
                 await _mediaCapture.VideoDeviceController.FocusControl.FocusAsync();
             }
-
+            if(_mirroringPreview)
+            {
+                PreviewControl.FlowDirection = (!_mirroringPreview) ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+            }
+                
 
             VideoFrame r = await _mediaCapture.GetPreviewFrameAsync(videoFrame);
 
 
-
+            PreviewControl.FlowDirection = _mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
 
 
             // Get the SoftwareBitmap representation of the file
