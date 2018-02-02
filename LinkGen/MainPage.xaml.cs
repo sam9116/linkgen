@@ -28,7 +28,7 @@ using Windows.Storage.Streams;
 using System.Collections.Generic;
 using SDKTemplate;
 using System.IO;
-
+using System.Threading;
 
 
 
@@ -68,12 +68,16 @@ namespace LinkGen
         private bool _mirroringPreview = false;
         private bool _externalCamera = false;
 
-
+        bool assistantlight;
         // Folder in which the captures will be stored (initialized in InitializeCameraAsync)
 
         private StorageFolder _captureFolder = null;
 
         IEnumerable<StreamResolution> allPreviewProperties;
+
+        //fix for app crash on resume https://github.com/Microsoft/Windows-universal-samples/pull/831/files
+        private static readonly SemaphoreSlim _mediaCaptureLifeLock = new SemaphoreSlim(1);
+
 
         #region Constructor, lifecycle and navigation
         public MainPage()
@@ -154,8 +158,10 @@ namespace LinkGen
                         ListViewItem item = new ListViewItem();
                         Button gobutton = new Button();
                         TextBox urlbox = new TextBox();
-                        StackPanel holder = new StackPanel();
-                        holder.Orientation = Orientation.Horizontal;
+                        StackPanel holder = new StackPanel
+                        {
+                            Orientation = Orientation.Horizontal
+                        };
 
                         gobutton.Content = "Go";
                         gobutton.Click += Button_clicked;
@@ -228,7 +234,7 @@ namespace LinkGen
                 await statusBar.HideAsync();
             }
             await InitializeCameraAsync();
-            
+
             if (_isPreviewing)
             {
                 await GetPreviewFrameAsSoftwareBitmapAsync();
@@ -330,6 +336,8 @@ namespace LinkGen
         {
             Debug.WriteLine("InitializeCameraAsync");
 
+            await _mediaCaptureLifeLock.WaitAsync();
+
             if (_mediaCapture == null)
             {
                 // Attempt to get the back camera if one is available, but use any camera device if not
@@ -338,8 +346,10 @@ namespace LinkGen
                 if (cameraDevice == null)
                 {
                     Debug.WriteLine("No camera device found!");
+                    _mediaCaptureLifeLock.Release();
                     return;
                 }
+
 
 
                 var picturesLibrary = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Pictures);
@@ -372,6 +382,10 @@ namespace LinkGen
                     Debug.WriteLine(e.ToString());
                     await CleanupCameraAsync();
                 }
+                finally
+                {
+                    _mediaCaptureLifeLock.Release();
+                }
 
                 // If initialization succeeded, start the preview
                 if (_isInitialized)
@@ -393,20 +407,27 @@ namespace LinkGen
 
 
                     var flashControl = _mediaCapture.VideoDeviceController.FlashControl;
+
+
+
                     if (flashControl.Supported)
                     {
-                        var assustantlight = _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported;
-                        if (assustantlight)
-                        {
-                            FlashButton.IsEnabled = true;
-                        }
+                        assistantlight = _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported;
+
+                        FlashButton.IsEnabled = true;
                     }
+
                     allPreviewProperties = _mediaCapture.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.VideoPreview).Select(x => new StreamResolution(x));
 
                     await StartPreviewAsync();
                 }
             }
+            else
+            {
+                _mediaCaptureLifeLock.Release();
+            }
         }
+
 
         /// <summary>
         /// Starts the preview and adjusts it for for rotation and mirroring after making a request to keep the screen on and unlocks the UI
@@ -459,16 +480,16 @@ namespace LinkGen
             }
 
             // Query all properties of the device 
-            
+
             //no 16:9 frames, they're a waste of space
 
-            allPreviewProperties = allPreviewProperties.OrderByDescending(x => x.Height * x.Width).OrderByDescending(x=>x.FrameRate);
+            allPreviewProperties = allPreviewProperties.OrderByDescending(x => x.Height * x.Width).OrderByDescending(x => x.FrameRate);
 
 
             List<StreamResolution> r = allPreviewProperties.ToList();
-            r.RemoveAll(x => x.AspectRatio>1.5);
+            r.RemoveAll(x => x.AspectRatio > 1.5);
             // Order them by resolution then frame rate
-            
+
 
             await _mediaCapture.SetEncodingPropertiesAsync(MediaStreamType.VideoPreview, r.First().EncodingProperties, null);
             await _mediaCapture.VideoDeviceController.SetMediaStreamPropertiesAsync(MediaStreamType.VideoPreview, r.First().EncodingProperties);
@@ -512,7 +533,7 @@ namespace LinkGen
             // Get information about the preview
             var previewProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview) as VideoEncodingProperties;
 
-           
+
             // Create the video frame to request a SoftwareBitmap preview frame
             var videoFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)previewProperties.Width, (int)previewProperties.Height);
 
@@ -527,11 +548,11 @@ namespace LinkGen
                 _mediaCapture.VideoDeviceController.FocusControl.Configure(new FocusSettings { Mode = FocusMode.Auto });
                 await _mediaCapture.VideoDeviceController.FocusControl.FocusAsync();
             }
-            if(_mirroringPreview)
+            if (_mirroringPreview)
             {
                 PreviewControl.FlowDirection = (!_mirroringPreview) ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
             }
-                
+
 
             VideoFrame r = await _mediaCapture.GetPreviewFrameAsync(videoFrame);
 
@@ -546,7 +567,7 @@ namespace LinkGen
             using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
             {
                 BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.BmpEncoderId, stream);
-                if(_displayOrientation == DisplayOrientations.Portrait)
+                if (_displayOrientation == DisplayOrientations.Portrait)
                 {
                     encoder.BitmapTransform.Rotation = BitmapRotation.Clockwise90Degrees;
                 }
@@ -579,9 +600,9 @@ namespace LinkGen
                 Debug.WriteLine("Prewview Tap restored");
 
             }
-            
 
-            
+
+
         }
 
         /// <summary>
@@ -595,134 +616,152 @@ namespace LinkGen
         /// <returns></returns>
         private async Task CleanupCameraAsync()
         {
-            if (_isInitialized)
+            await _mediaCaptureLifeLock.WaitAsync();
+
+            try
             {
-                if (_isPreviewing)
+                if (_isInitialized)
                 {
-                    // The call to stop the preview is included here for completeness, but can be
-                    // safely removed if a call to MediaCapture.Dispose() is being made later,
-                    // as the preview will be automatically stopped at that point
-                    await StopPreviewAsync();
+                    if (_isPreviewing)
+                    {
+                        // The call to stop the preview is included here for completeness, but can be
+                        // safely removed if a call to MediaCapture.Dispose() is being made later,
+                        // as the preview will be automatically stopped at that point
+                        await StopPreviewAsync();
+                    }
+
+                    _isInitialized = false;
                 }
 
-                _isInitialized = false;
+                if (_mediaCapture != null)
+                {
+                    _mediaCapture.Failed -= MediaCapture_Failed;
+                    _mediaCapture.Dispose();
+                    _mediaCapture = null;
+                }
             }
-
-            if (_mediaCapture != null)
+            finally
             {
-                _mediaCapture.Failed -= MediaCapture_Failed;
-                _mediaCapture.Dispose();
-                _mediaCapture = null;
+                _mediaCaptureLifeLock.Release();
             }
         }
 
-        #endregion MediaCapture methods
+
+            #endregion MediaCapture methods
 
 
-        #region Helper functions
+            #region Helper functions
 
-        /// <summary>
-        /// Queries the available video capture devices to try and find one mounted on the desired panel
-        /// </summary>
-        /// <param name="desiredPanel">The panel on the device that the desired camera is mounted on</param>
-        /// <returns>A DeviceInformation instance with a reference to the camera mounted on the desired panel if available,
-        ///          any other camera if not, or null if no camera is available.</returns>
-        private static async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel desiredPanel)
-        {
-            // Get available devices for capturing pictures
-            var allVideoDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
-
-            // Get the desired camera by panel
-            DeviceInformation desiredDevice = allVideoDevices.FirstOrDefault(x => x.EnclosureLocation != null && x.EnclosureLocation.Panel == desiredPanel);
-
-            // If there is no device mounted on the desired panel, return the first device found
-            return desiredDevice ?? allVideoDevices.FirstOrDefault();
-        }
-
-        /// <summary>
-        /// Converts the given orientation of the app on the screen to the corresponding rotation in degrees
-        /// </summary>
-        /// <param name="orientation">The orientation of the app on the screen</param>
-        /// <returns>An orientation in degrees</returns>
-        private static int ConvertDisplayOrientationToDegrees(DisplayOrientations orientation)
-        {
-            switch (orientation)
+            /// <summary>
+            /// Queries the available video capture devices to try and find one mounted on the desired panel
+            /// </summary>
+            /// <param name="desiredPanel">The panel on the device that the desired camera is mounted on</param>
+            /// <returns>A DeviceInformation instance with a reference to the camera mounted on the desired panel if available,
+            ///          any other camera if not, or null if no camera is available.</returns>
+            private static async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel desiredPanel)
             {
-                case DisplayOrientations.Portrait:
-                    return 90;
-                case DisplayOrientations.LandscapeFlipped:
-                    return 180;
-                case DisplayOrientations.PortraitFlipped:
-                    return 270;
-                case DisplayOrientations.Landscape:
-                default:
-                    return 0;
+                // Get available devices for capturing pictures
+                var allVideoDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
+
+                // Get the desired camera by panel
+                DeviceInformation desiredDevice = allVideoDevices.FirstOrDefault(x => x.EnclosureLocation != null && x.EnclosureLocation.Panel == desiredPanel);
+
+                // If there is no device mounted on the desired panel, return the first device found
+                return desiredDevice ?? allVideoDevices.FirstOrDefault();
             }
-        }
 
-        /// <summary>
-        /// Saves a SoftwareBitmap to the Pictures library with the specified name
-        /// </summary>
-        /// <param name="bitmap"></param>
-        /// <returns></returns>
-        private static async Task SaveSoftwareBitmapAsync(SoftwareBitmap bitmap)
-        {
-            var file = await Package.Current.InstalledLocation.CreateFileAsync("Photo.jpg", CreationCollisionOption.GenerateUniqueName);
-
-            using (var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite))
+            /// <summary>
+            /// Converts the given orientation of the app on the screen to the corresponding rotation in degrees
+            /// </summary>
+            /// <param name="orientation">The orientation of the app on the screen</param>
+            /// <returns>An orientation in degrees</returns>
+            private static int ConvertDisplayOrientationToDegrees(DisplayOrientations orientation)
             {
-                var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, outputStream);
-
-                // Grab the data from the SoftwareBitmap
-                encoder.SetSoftwareBitmap(bitmap);
-                await encoder.FlushAsync();
+                switch (orientation)
+                {
+                    case DisplayOrientations.Portrait:
+                        return 90;
+                    case DisplayOrientations.LandscapeFlipped:
+                        return 180;
+                    case DisplayOrientations.PortraitFlipped:
+                        return 270;
+                    case DisplayOrientations.Landscape:
+                    default:
+                        return 0;
+                }
             }
-        }
 
-
-        /// <summary>
-        /// Saves a SoftwareBitmap to the specified StorageFile
-        /// </summary>
-        /// <param name="bitmap">SoftwareBitmap to save</param>
-        /// <param name="file">Target StorageFile to save to</param>
-        /// <returns></returns>
-
-        private static async Task SaveSoftwareBitmapAsync(SoftwareBitmap bitmap, StorageFile file)
-        {
-            using (var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite))
+            /// <summary>
+            /// Saves a SoftwareBitmap to the Pictures library with the specified name
+            /// </summary>
+            /// <param name="bitmap"></param>
+            /// <returns></returns>
+            private static async Task SaveSoftwareBitmapAsync(SoftwareBitmap bitmap)
             {
-                var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, outputStream);
+                var file = await Package.Current.InstalledLocation.CreateFileAsync("Photo.jpg", CreationCollisionOption.GenerateUniqueName);
 
-                // Grab the data from the SoftwareBitmap
-                encoder.SetSoftwareBitmap(bitmap);
-                await encoder.FlushAsync();
+                using (var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite))
+                {
+                    var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, outputStream);
+
+                    // Grab the data from the SoftwareBitmap
+                    encoder.SetSoftwareBitmap(bitmap);
+                    await encoder.FlushAsync();
+                }
             }
-        }
-
-        private async void OnPageUnloaded(object sender, RoutedEventArgs e)
-        {
-            await CleanupCameraAsync();
-        }
 
 
+            /// <summary>
+            /// Saves a SoftwareBitmap to the specified StorageFile
+            /// </summary>
+            /// <param name="bitmap">SoftwareBitmap to save</param>
+            /// <param name="file">Target StorageFile to save to</param>
+            /// <returns></returns>
 
-        #endregion Helper functions 
+            private static async Task SaveSoftwareBitmapAsync(SoftwareBitmap bitmap, StorageFile file)
+            {
+                using (var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite))
+                {
+                    var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, outputStream);
 
-        private void Flash_Click(object sender, RoutedEventArgs e)
-        {
-            var flashControl = _mediaCapture.VideoDeviceController.FlashControl;
-            var assustantlight = _mediaCapture.VideoDeviceController.FlashControl.AssistantLightSupported;
-            flashControl.AssistantLightEnabled = !flashControl.AssistantLightEnabled;
-            FlashButton.Content = flashControl.AssistantLightEnabled ? "Flash On" : "Flash Off";
+                    // Grab the data from the SoftwareBitmap
+                    encoder.SetSoftwareBitmap(bitmap);
+                    await encoder.FlushAsync();
+                }
+            }
 
-        }
+            private async void OnPageUnloaded(object sender, RoutedEventArgs e)
+            {
+                await CleanupCameraAsync();
+            }
 
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            Save = !Save;
 
-            SaveButton.Content = Save ? "Save On" : "Save Off";
 
+            #endregion Helper functions 
+
+            private void Flash_Click(object sender, RoutedEventArgs e)
+            {
+                var flashControl = _mediaCapture.VideoDeviceController.FlashControl;
+                if (assistantlight)
+                {
+                    flashControl.AssistantLightEnabled = !flashControl.AssistantLightEnabled;
+                    FlashButton.Content = flashControl.AssistantLightEnabled ? "Flash On" : "Flash Off";
+                }
+                else
+                {
+                    flashControl.Enabled = !flashControl.Enabled;
+                    FlashButton.Content = flashControl.Enabled ? "Flash On" : "Flash Off";
+                }
+
+
+            }
+
+            private void Save_Click(object sender, RoutedEventArgs e)
+            {
+                Save = !Save;
+
+                SaveButton.Content = Save ? "Save On" : "Save Off";
+
+            }
         }
     }
-}

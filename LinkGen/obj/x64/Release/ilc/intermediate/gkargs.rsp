@@ -21,6 +21,6 @@
 /Lib:"C:\Program Files (x86)\Windows Kits\10\References\10.0.15063.0\Windows.System.UserProfile.UserProfileContract\1.0.0.0"
 /Lib:"C:\Program Files (x86)\Windows Kits\10\References\10.0.15063.0\Windows.UI.WebUI.Core.WebUICommandBarContract\1.0.0.0"
 /WinMD:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\ilc\in\WinMetadata\Windows.winmd"
-/VSTelemetrySessionSettings:"{"AppId":1001,"AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","HostName":"Dev14","Id":"bceb1359-d646-428e-b31c-5d6bfb518ee7","IsOptedIn":true,"ProcessStartTime":636487638516811924,"UserId":"4028fa40-f45b-4b4d-9bf9-bda721baec08"}"
+/VSTelemetrySessionSettings:"{"AppId":1001,"AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","HostName":"Dev14","Id":"16cd2d75-d2d4-4371-b00c-fa851da93e39","IsOptedIn":true,"ProcessStartTime":636531359384676719,"UserId":"4028fa40-f45b-4b4d-9bf9-bda721baec08"}"
 /RdXmlPath:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\LibraryXML"
 /RunOnlyPreDR

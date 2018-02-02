@@ -6,7 +6,6 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\LinkGen.pdb
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\resources.pri
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\AppxManifest.xml
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\Core\AppxManifest.xml
-C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\Core\ForBundle\AppxManifest.xml
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\Core\LinkGen.exe
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\LinkGen.build.appxrecipe
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\Microsoft.CSharp.dll
@@ -123,7 +122,6 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.ReaderWriter.
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.XDocument.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.XmlDocument.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.XmlSerializer.dll
-C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\LinkGen.csprojResolveAssemblyReference.cache
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\App.g.i.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\App.g.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\MainPage.g.i.cs
