@@ -3,7 +3,7 @@
 /runtime:mrt100_app
 /eh:clr
 /pdb
-"/nativeLink:C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x64\ilc\lib\Native\vmath.lib"
+"/nativeLink:C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x64\ilc\lib\Native\vmath.lib"
 /customImports
 /methodBodyFolding
 "C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Release\ilc\intermediate\MDIL\LinkGen.mdilexe"

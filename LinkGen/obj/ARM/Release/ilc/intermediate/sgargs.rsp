@@ -5,7 +5,7 @@
 /ref:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\in"
 /ref:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\in\\"
 /ref:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\in\\"
-/ref:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\ARM\ilc\lib\Private\\"
+/ref:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\ARM\ilc\lib\Private\\"
 /ref:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\in\WinMetadata"
 /ca:System.Private.CoreLib
-/cscpath:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\ARM\ilc\csc"
+/cscpath:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\ARM\ilc\csc"

@@ -770,7 +770,7 @@ namespace System
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> get_Value(global::System.__ComObject __this)
 			{
-				global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> __ret = global::__Interop.ForwardComStubs.Stub_48<global::Windows.Foundation.IReference<global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>>>(
+				global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> __ret = global::__Interop.ForwardComStubs.Stub_46<global::Windows.Foundation.IReference<global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>>>(
 									__this, 
 									6
 								);
@@ -789,7 +789,7 @@ namespace System
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> get_Value(global::System.__ComObject __this)
 			{
-				global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> __ret = global::__Interop.ForwardComStubs.Stub_46<global::Windows.Foundation.IReference<global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>>>(
+				global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> __ret = global::__Interop.ForwardComStubs.Stub_43<global::Windows.Foundation.IReference<global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>>>(
 									__this, 
 									6
 								);
@@ -2151,7 +2151,7 @@ namespace System.Collections.Generic
 						global::System.__ComObject __this, 
 						global::System.Guid key)
 			{
-				object __ret = global::__Interop.ForwardComStubs.Stub_37<global::System.Collections.Generic.IDictionary<global::System.Guid, object>>(
+				object __ret = global::__Interop.ForwardComStubs.Stub_38<global::System.Collections.Generic.IDictionary<global::System.Guid, object>>(
 									__this, 
 									key, 
 									6
@@ -2163,7 +2163,7 @@ namespace System.Collections.Generic
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Size(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::System.Collections.Generic.IDictionary<global::System.Guid, object>>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::System.Collections.Generic.IDictionary<global::System.Guid, object>>(
 									__this, 
 									7
 								);
@@ -2567,7 +2567,7 @@ namespace System.Collections.Generic
 						global::System.__ComObject __this, 
 						global::System.Guid key)
 			{
-				object __ret = global::__Interop.ForwardComStubs.Stub_37<global::System.Collections.Generic.IReadOnlyDictionary<global::System.Guid, object>>(
+				object __ret = global::__Interop.ForwardComStubs.Stub_38<global::System.Collections.Generic.IReadOnlyDictionary<global::System.Guid, object>>(
 									__this, 
 									key, 
 									6
@@ -2579,7 +2579,7 @@ namespace System.Collections.Generic
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Size(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::System.Collections.Generic.IReadOnlyDictionary<global::System.Guid, object>>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::System.Collections.Generic.IReadOnlyDictionary<global::System.Guid, object>>(
 									__this, 
 									7
 								);
@@ -5389,7 +5389,7 @@ namespace System.Runtime.InteropServices
 						global::System.__ComObject __this, 
 						uint dwReserved)
 			{
-				global::__Interop.ForwardComStubs.Stub_45<global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime>(
+				global::__Interop.ForwardComStubs.Stub_36<global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime>(
 									__this, 
 									dwReserved, 
 									8
@@ -5528,7 +5528,7 @@ namespace System.Runtime.InteropServices
 				pfnMarshalInterface_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget24>(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl.MarshalInterface__n),
 				pfnUnmarshalInterface_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget25>(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl.UnmarshalInterface__n),
 				pfnReleaseMarshalData_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl.ReleaseMarshalData__n),
-				pfnDisconnectObject_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget18>(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl.DisconnectObject__n),
+				pfnDisconnectObject_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget8>(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl.DisconnectObject__n),
 			}
 			#endif
 			;
@@ -5738,7 +5738,7 @@ namespace System.Runtime.InteropServices
 									__this, 
 									5
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_13(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10(
 									__this, 
 									unsafe_dwReserved, 
 									__methodPtr
@@ -7677,7 +7677,7 @@ namespace Windows.Devices.Enumeration
 						global::System.__ComObject __this, 
 						global::Windows.Devices.Enumeration.DeviceClass deviceClass)
 			{
-				global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection> __ret = global::__Interop.ForwardComStubs.Stub_36<global::Windows.Devices.Enumeration.IDeviceInformationStatics, global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection>>(
+				global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection> __ret = global::__Interop.ForwardComStubs.Stub_47<global::Windows.Devices.Enumeration.IDeviceInformationStatics, global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection>>(
 									__this, 
 									((int)deviceClass), 
 									9
@@ -9044,6 +9044,869 @@ namespace Windows.Foundation
 		}
 	}
 
+	// Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>
+	public unsafe static class IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl
+	{
+		// StubClass for 'Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>'
+		public static partial class Stubs
+		{
+			// Signature, Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>.put_Progress, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationProgressHandler_2_Windows_Storage_Streams_IBuffer__uint___Windows_Foundation__AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V_ *, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Progress(
+						global::System.__ComObject __this, 
+						global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
+			{
+				// Setup
+				void* unsafe_handler = default(void*);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
+										handler, 
+										typeof(global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle
+									);
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle, 
+										6, 
+										unsafe_handler
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					// Return
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
+				}
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> get_Progress(global::System.__ComObject __this)
+			{
+				global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> __ret = global::__Interop.ForwardComStubs.Stub_43<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			// Signature, Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>.put_Completed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationWithProgressCompletedHandler_2_Windows_Storage_Streams_IBuffer__uint___Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V_ *, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Completed(
+						global::System.__ComObject __this, 
+						global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
+			{
+				// Setup
+				void* unsafe_handler = default(void*);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
+										handler, 
+										typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle
+									);
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle, 
+										8, 
+										unsafe_handler
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					// Return
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
+				}
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> get_Completed(global::System.__ComObject __this)
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Storage.Streams.IBuffer GetResults(global::System.__ComObject __this)
+			{
+				global::Windows.Storage.Streams.IBuffer __ret = global::__Interop.ForwardComStubs.Stub_10<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									10
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Id")]
+			uint global::Windows.Foundation.IAsyncInfo.get_Id()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return 0;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Status")]
+			global::Windows.Foundation.AsyncStatus global::Windows.Foundation.IAsyncInfo.get_Status()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncStatus);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.ErrorCode")]
+			global::System.Exception global::Windows.Foundation.IAsyncInfo.get_ErrorCode()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::System.Exception);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Foundation.IAsyncInfo.Cancel()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Foundation.IAsyncInfo.Close()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
+			void global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.put_Progress(global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
+			{
+				global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.put_Progress(
+									this, 
+									handler
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
+			global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.get_Progress()
+			{
+				global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.get_Progress(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Completed")]
+			void global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.put_Completed(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
+			{
+				global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.put_Completed(
+									this, 
+									handler
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.get_Completed()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Storage.Streams.IBuffer global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.GetResults()
+			{
+				global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.GetResults(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+	}
+
+	// Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,uint>
+	public unsafe static class AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void Invoke(
+					this global::System.__ComObject __this, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> asyncInfo, 
+					uint progressInfo)
+		{
+			global::__Interop.ForwardComStubs.Stub_44<global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
+								__this, 
+								asyncInfo, 
+								progressInfo, 
+								3
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		// v-table for 'Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,uint>'
+		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>))]
+		internal unsafe partial struct Vtbl
+		{
+			global::System.IntPtr pfnQueryInterface;
+			global::System.IntPtr pfnAddRef;
+			global::System.IntPtr pfnRelease;
+			// Windows_Foundation__AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V_
+			global::System.IntPtr pfnInvoke_;
+			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_Vtbl_s_staticV" +
+				"table")]
+			static global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl s_staticVtable
+			#if false
+			 = new global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl() {
+				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
+				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
+				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
+				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget9>(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Invoke__n),
+			}
+			#endif
+			;
+			static global::System.IntPtr s_cachedVtable;
+			internal static global::System.IntPtr GetVtbl()
+			{
+				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_staticVtable))
+					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
+										pVtbl, 
+										ref global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_cachedVtable, 
+										sizeof(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl)
+									);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.NativeCallable]
+			static int Invoke__n(
+						global::System.IntPtr pComThis, 
+						void* unsafe_asyncInfo, 
+						uint unsafe_progressInfo)
+			{
+				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
+				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>>(
+									__this, 
+									0
+								);
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
+									__this, 
+									unsafe_asyncInfo, 
+									unsafe_progressInfo, 
+									__methodPtr
+								));
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			private static class Vtbl__McgRvaContainer
+			{
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl), "Invoke__n")]
+				[global::System.Runtime.CompilerServices.NonArray]
+				static readonly byte[] RVA_Windows_Foundation_AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,uint>
+	public unsafe static class AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void Invoke(
+					this global::System.__ComObject __this, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> asyncInfo, 
+					global::Windows.Foundation.AsyncStatus asyncStatus)
+		{
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
+								__this, 
+								asyncInfo, 
+								((int)asyncStatus), 
+								3
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		// v-table for 'Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,uint>'
+		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>))]
+		internal unsafe partial struct Vtbl
+		{
+			global::System.IntPtr pfnQueryInterface;
+			global::System.IntPtr pfnAddRef;
+			global::System.IntPtr pfnRelease;
+			// Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V_
+			global::System.IntPtr pfnInvoke_;
+			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_V" +
+				"tbl_s_staticVtable")]
+			static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl s_staticVtable
+			#if false
+			 = new global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl() {
+				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
+				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
+				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
+				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Invoke__n),
+			}
+			#endif
+			;
+			static global::System.IntPtr s_cachedVtable;
+			internal static global::System.IntPtr GetVtbl()
+			{
+				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_staticVtable))
+					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
+										pVtbl, 
+										ref global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_cachedVtable, 
+										sizeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl)
+									);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.NativeCallable]
+			static int Invoke__n(
+						global::System.IntPtr pComThis, 
+						void* unsafe_asyncInfo, 
+						global::Windows.Foundation.AsyncStatus unsafe_asyncStatus)
+			{
+				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
+				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>>(
+									__this, 
+									0
+								);
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_12<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
+									__this, 
+									unsafe_asyncInfo, 
+									unsafe_asyncStatus, 
+									__methodPtr
+								));
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			private static class Vtbl__McgRvaContainer
+			{
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl), "Invoke__n")]
+				[global::System.Runtime.CompilerServices.NonArray]
+				static readonly byte[] RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.Foundation.IAsyncOperationWithProgress<uint,uint>
+	public unsafe static class IAsyncOperationWithProgress_A_uint_j_uint_V___Impl
+	{
+		// StubClass for 'Windows.Foundation.IAsyncOperationWithProgress<uint,uint>'
+		public static partial class Stubs
+		{
+			// Signature, Windows.Foundation.IAsyncOperationWithProgress<uint,uint>.put_Progress, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationProgressHandler_2_uint__uint___Windows_Foundation__AsyncOperationProgressHandler_A_uint_j_uint_V_ *, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Progress(
+						global::System.__ComObject __this, 
+						global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> handler)
+			{
+				// Setup
+				void* unsafe_handler = default(void*);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
+										handler, 
+										typeof(global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>).TypeHandle
+									);
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>).TypeHandle, 
+										6, 
+										unsafe_handler
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					// Return
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
+				}
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> get_Progress(global::System.__ComObject __this)
+			{
+				global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> __ret = global::__Interop.ForwardComStubs.Stub_46<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			// Signature, Windows.Foundation.IAsyncOperationWithProgress<uint,uint>.put_Completed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationWithProgressCompletedHandler_2_uint__uint___Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V_ *, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Completed(
+						global::System.__ComObject __this, 
+						global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> handler)
+			{
+				// Setup
+				void* unsafe_handler = default(void*);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
+										handler, 
+										typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>).TypeHandle
+									);
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>).TypeHandle, 
+										8, 
+										unsafe_handler
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					// Return
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
+				}
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> get_Completed(global::System.__ComObject __this)
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static uint GetResults(global::System.__ComObject __this)
+			{
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
+									__this, 
+									10
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Foundation.IAsyncOperationWithProgress<uint,uint>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Id")]
+			uint global::Windows.Foundation.IAsyncInfo.get_Id()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return 0;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Status")]
+			global::Windows.Foundation.AsyncStatus global::Windows.Foundation.IAsyncInfo.get_Status()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncStatus);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.ErrorCode")]
+			global::System.Exception global::Windows.Foundation.IAsyncInfo.get_ErrorCode()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::System.Exception);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Foundation.IAsyncInfo.Cancel()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Foundation.IAsyncInfo.Close()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
+			void global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.put_Progress(global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> handler)
+			{
+				global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.put_Progress(
+									this, 
+									handler
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
+			global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.get_Progress()
+			{
+				global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.get_Progress(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Completed")]
+			void global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.put_Completed(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> handler)
+			{
+				global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.put_Completed(
+									this, 
+									handler
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.get_Completed()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			uint global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.GetResults()
+			{
+				uint __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.GetResults(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+	}
+
+	// Windows.Foundation.AsyncOperationProgressHandler<uint,uint>
+	public unsafe static class AsyncOperationProgressHandler_A_uint_j_uint_V___Impl
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void Invoke(
+					this global::System.__ComObject __this, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> asyncInfo, 
+					uint progressInfo)
+		{
+			global::__Interop.ForwardComStubs.Stub_44<global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
+								__this, 
+								asyncInfo, 
+								progressInfo, 
+								3
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		// v-table for 'Windows.Foundation.AsyncOperationProgressHandler<uint,uint>'
+		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>))]
+		internal unsafe partial struct Vtbl
+		{
+			global::System.IntPtr pfnQueryInterface;
+			global::System.IntPtr pfnAddRef;
+			global::System.IntPtr pfnRelease;
+			// Windows_Foundation__AsyncOperationProgressHandler_A_uint_j_uint_V_
+			global::System.IntPtr pfnInvoke_;
+			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationProgressHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable")]
+			static global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl s_staticVtable
+			#if false
+			 = new global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl() {
+				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
+				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
+				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
+				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget9>(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.Invoke__n),
+			}
+			#endif
+			;
+			static global::System.IntPtr s_cachedVtable;
+			internal static global::System.IntPtr GetVtbl()
+			{
+				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.s_staticVtable))
+					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
+										pVtbl, 
+										ref global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.s_cachedVtable, 
+										sizeof(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl)
+									);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.NativeCallable]
+			static int Invoke__n(
+						global::System.IntPtr pComThis, 
+						void* unsafe_asyncInfo, 
+						uint unsafe_progressInfo)
+			{
+				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
+				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>>(
+									__this, 
+									0
+								);
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
+									__this, 
+									unsafe_asyncInfo, 
+									unsafe_progressInfo, 
+									__methodPtr
+								));
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			private static class Vtbl__McgRvaContainer
+			{
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl), "Invoke__n")]
+				[global::System.Runtime.CompilerServices.NonArray]
+				static readonly byte[] RVA_Windows_Foundation_AsyncOperationProgressHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint,uint>
+	public unsafe static class AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void Invoke(
+					this global::System.__ComObject __this, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> asyncInfo, 
+					global::Windows.Foundation.AsyncStatus asyncStatus)
+		{
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
+								__this, 
+								asyncInfo, 
+								((int)asyncStatus), 
+								3
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		// v-table for 'Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint,uint>'
+		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>))]
+		internal unsafe partial struct Vtbl
+		{
+			global::System.IntPtr pfnQueryInterface;
+			global::System.IntPtr pfnAddRef;
+			global::System.IntPtr pfnRelease;
+			// Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V_
+			global::System.IntPtr pfnInvoke_;
+			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable")]
+			static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl s_staticVtable
+			#if false
+			 = new global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl() {
+				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
+				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
+				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
+				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.Invoke__n),
+			}
+			#endif
+			;
+			static global::System.IntPtr s_cachedVtable;
+			internal static global::System.IntPtr GetVtbl()
+			{
+				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.s_staticVtable))
+					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
+										pVtbl, 
+										ref global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.s_cachedVtable, 
+										sizeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl)
+									);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.NativeCallable]
+			static int Invoke__n(
+						global::System.IntPtr pComThis, 
+						void* unsafe_asyncInfo, 
+						global::Windows.Foundation.AsyncStatus unsafe_asyncStatus)
+			{
+				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
+				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>>(
+									__this, 
+									0
+								);
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_12<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
+									__this, 
+									unsafe_asyncInfo, 
+									unsafe_asyncStatus, 
+									__methodPtr
+								));
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			private static class Vtbl__McgRvaContainer
+			{
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
+				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl), "Invoke__n")]
+				[global::System.Runtime.CompilerServices.NonArray]
+				static readonly byte[] RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.Foundation.IAsyncOperation<bool>
+	public unsafe static class IAsyncOperation_A_bool_V___Impl
+	{
+		// StubClass for 'Windows.Foundation.IAsyncOperation<bool>'
+		public static partial class Stubs
+		{
+			// Signature, Windows.Foundation.IAsyncOperation<bool>.put_Completed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationCompletedHandler_1_bool___Windows_Foundation__AsyncOperationCompletedHandler_A_bool_V_ *, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Completed(
+						global::System.__ComObject __this, 
+						global::Windows.Foundation.AsyncOperationCompletedHandler<bool> handler)
+			{
+				// Setup
+				void* unsafe_handler = default(void*);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
+										handler, 
+										typeof(global::Windows.Foundation.AsyncOperationCompletedHandler<bool>).TypeHandle
+									);
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.IAsyncOperation<bool>).TypeHandle, 
+										6, 
+										unsafe_handler
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					// Return
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
+				}
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.AsyncOperationCompletedHandler<bool> get_Completed(global::System.__ComObject __this)
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncOperationCompletedHandler<bool>);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool GetResults(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_12<global::Windows.Foundation.IAsyncOperation<bool>>(
+									__this, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Foundation.IAsyncOperation<bool>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.IAsyncOperation<bool>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.IAsyncOperation<bool>
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Id")]
+			uint global::Windows.Foundation.IAsyncInfo.get_Id()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return 0;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Status")]
+			global::Windows.Foundation.AsyncStatus global::Windows.Foundation.IAsyncInfo.get_Status()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncStatus);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.ErrorCode")]
+			global::System.Exception global::Windows.Foundation.IAsyncInfo.get_ErrorCode()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::System.Exception);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Foundation.IAsyncInfo.Cancel()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Foundation.IAsyncInfo.Close()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperation`1.Completed")]
+			void global::Windows.Foundation.IAsyncOperation<bool>.put_Completed(global::Windows.Foundation.AsyncOperationCompletedHandler<bool> handler)
+			{
+				global::Windows.Foundation.IAsyncOperation_A_bool_V___Impl.Stubs.put_Completed(
+									this, 
+									handler
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Foundation.AsyncOperationCompletedHandler<bool> global::Windows.Foundation.IAsyncOperation<bool>.get_Completed()
+			{
+				global::__Interop.McgHelpers.FailFastForReducedMethod();
+				return default(global::Windows.Foundation.AsyncOperationCompletedHandler<bool>);
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			bool global::Windows.Foundation.IAsyncOperation<bool>.GetResults()
+			{
+				bool __retVal = global::Windows.Foundation.IAsyncOperation_A_bool_V___Impl.Stubs.GetResults(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+	}
+
+	// Windows.Foundation.AsyncOperationCompletedHandler<bool>
+	public unsafe static class AsyncOperationCompletedHandler_A_bool_V___Impl
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void Invoke(
+					this global::System.__ComObject __this, 
+					global::Windows.Foundation.IAsyncOperation<bool> asyncInfo, 
+					global::Windows.Foundation.AsyncStatus asyncStatus)
+		{
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<bool>, global::Windows.Foundation.IAsyncOperation<bool>>(
+								__this, 
+								asyncInfo, 
+								((int)asyncStatus), 
+								3
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+	}
+
 	// Windows.Foundation.IAsyncOperation<Windows.Media.VideoFrame>
 	public unsafe static class IAsyncOperation_A__w_Media_VideoFrame_V___Impl
 	{
@@ -9179,7 +10042,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Media.VideoFrame> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Media.VideoFrame>, global::Windows.Foundation.IAsyncOperation<global::Windows.Media.VideoFrame>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Media.VideoFrame>, global::Windows.Foundation.IAsyncOperation<global::Windows.Media.VideoFrame>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -10124,869 +10987,6 @@ namespace Windows.Foundation
 		}
 	}
 
-	// Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>
-	public unsafe static class IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl
-	{
-		// StubClass for 'Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>'
-		public static partial class Stubs
-		{
-			// Signature, Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>.put_Progress, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationProgressHandler_2_Windows_Storage_Streams_IBuffer__uint___Windows_Foundation__AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V_ *, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Progress(
-						global::System.__ComObject __this, 
-						global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
-			{
-				// Setup
-				void* unsafe_handler = default(void*);
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
-										handler, 
-										typeof(global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle
-									);
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle, 
-										6, 
-										unsafe_handler
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					// Return
-				}
-				finally
-				{
-					// Cleanup
-					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
-				}
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> get_Progress(global::System.__ComObject __this)
-			{
-				global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> __ret = global::__Interop.ForwardComStubs.Stub_46<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
-									__this, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			// Signature, Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>.put_Completed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationWithProgressCompletedHandler_2_Windows_Storage_Streams_IBuffer__uint___Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V_ *, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Completed(
-						global::System.__ComObject __this, 
-						global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
-			{
-				// Setup
-				void* unsafe_handler = default(void*);
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
-										handler, 
-										typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle
-									);
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>).TypeHandle, 
-										8, 
-										unsafe_handler
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					// Return
-				}
-				finally
-				{
-					// Cleanup
-					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
-				}
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> get_Completed(global::System.__ComObject __this)
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.Storage.Streams.IBuffer GetResults(global::System.__ComObject __this)
-			{
-				global::Windows.Storage.Streams.IBuffer __ret = global::__Interop.ForwardComStubs.Stub_10<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>, global::Windows.Storage.Streams.IBuffer>(
-									__this, 
-									10
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-		}
-
-		// DispatchClass for 'Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,uint>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Id")]
-			uint global::Windows.Foundation.IAsyncInfo.get_Id()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return 0;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Status")]
-			global::Windows.Foundation.AsyncStatus global::Windows.Foundation.IAsyncInfo.get_Status()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncStatus);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.ErrorCode")]
-			global::System.Exception global::Windows.Foundation.IAsyncInfo.get_ErrorCode()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::System.Exception);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			void global::Windows.Foundation.IAsyncInfo.Cancel()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			void global::Windows.Foundation.IAsyncInfo.Close()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
-			void global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.put_Progress(global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
-			{
-				global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.put_Progress(
-									this, 
-									handler
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
-			global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.get_Progress()
-			{
-				global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint> __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.get_Progress(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Completed")]
-			void global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.put_Completed(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> handler)
-			{
-				global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.put_Completed(
-									this, 
-									handler
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint> global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.get_Completed()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			global::Windows.Storage.Streams.IBuffer global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>.GetResults()
-			{
-				global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Stubs.GetResults(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-		}
-	}
-
-	// Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,uint>
-	public unsafe static class AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void Invoke(
-					this global::System.__ComObject __this, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> asyncInfo, 
-					uint progressInfo)
-		{
-			global::__Interop.ForwardComStubs.Stub_47<global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
-								__this, 
-								asyncInfo, 
-								progressInfo, 
-								3
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		// v-table for 'Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,uint>'
-		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>))]
-		internal unsafe partial struct Vtbl
-		{
-			global::System.IntPtr pfnQueryInterface;
-			global::System.IntPtr pfnAddRef;
-			global::System.IntPtr pfnRelease;
-			// Windows_Foundation__AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V_
-			global::System.IntPtr pfnInvoke_;
-			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_Vtbl_s_staticV" +
-				"table")]
-			static global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl s_staticVtable
-			#if false
-			 = new global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl() {
-				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
-				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
-				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
-				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget19>(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Invoke__n),
-			}
-			#endif
-			;
-			static global::System.IntPtr s_cachedVtable;
-			internal static global::System.IntPtr GetVtbl()
-			{
-				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_staticVtable))
-					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
-										pVtbl, 
-										ref global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_cachedVtable, 
-										sizeof(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl)
-									);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.NativeCallable]
-			static int Invoke__n(
-						global::System.IntPtr pComThis, 
-						void* unsafe_asyncInfo, 
-						uint unsafe_progressInfo)
-			{
-				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
-				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationProgressHandler<global::Windows.Storage.Streams.IBuffer, uint>>(
-									__this, 
-									0
-								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
-									__this, 
-									unsafe_asyncInfo, 
-									unsafe_progressInfo, 
-									__methodPtr
-								));
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			private static class Vtbl__McgRvaContainer
-			{
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl), "Invoke__n")]
-				[global::System.Runtime.CompilerServices.NonArray]
-				static readonly byte[] RVA_Windows_Foundation_AsyncOperationProgressHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
-						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-			}
-		}
-	}
-
-	// Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,uint>
-	public unsafe static class AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void Invoke(
-					this global::System.__ComObject __this, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> asyncInfo, 
-					global::Windows.Foundation.AsyncStatus asyncStatus)
-		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
-								__this, 
-								asyncInfo, 
-								((int)asyncStatus), 
-								3
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		// v-table for 'Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,uint>'
-		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>))]
-		internal unsafe partial struct Vtbl
-		{
-			global::System.IntPtr pfnQueryInterface;
-			global::System.IntPtr pfnAddRef;
-			global::System.IntPtr pfnRelease;
-			// Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V_
-			global::System.IntPtr pfnInvoke_;
-			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_V" +
-				"tbl_s_staticVtable")]
-			static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl s_staticVtable
-			#if false
-			 = new global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl() {
-				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
-				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
-				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
-				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget20>(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.Invoke__n),
-			}
-			#endif
-			;
-			static global::System.IntPtr s_cachedVtable;
-			internal static global::System.IntPtr GetVtbl()
-			{
-				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_staticVtable))
-					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
-										pVtbl, 
-										ref global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl.s_cachedVtable, 
-										sizeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl)
-									);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.NativeCallable]
-			static int Invoke__n(
-						global::System.IntPtr pComThis, 
-						void* unsafe_asyncInfo, 
-						global::Windows.Foundation.AsyncStatus unsafe_asyncStatus)
-			{
-				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
-				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<global::Windows.Storage.Streams.IBuffer, uint>>(
-									__this, 
-									0
-								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15<global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint>>(
-									__this, 
-									unsafe_asyncInfo, 
-									unsafe_asyncStatus, 
-									__methodPtr
-								));
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			private static class Vtbl__McgRvaContainer
-			{
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl), "Invoke__n")]
-				[global::System.Runtime.CompilerServices.NonArray]
-				static readonly byte[] RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A__w_Storage_Streams_IBuffer_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
-						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-			}
-		}
-	}
-
-	// Windows.Foundation.IAsyncOperationWithProgress<uint,uint>
-	public unsafe static class IAsyncOperationWithProgress_A_uint_j_uint_V___Impl
-	{
-		// StubClass for 'Windows.Foundation.IAsyncOperationWithProgress<uint,uint>'
-		public static partial class Stubs
-		{
-			// Signature, Windows.Foundation.IAsyncOperationWithProgress<uint,uint>.put_Progress, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationProgressHandler_2_uint__uint___Windows_Foundation__AsyncOperationProgressHandler_A_uint_j_uint_V_ *, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Progress(
-						global::System.__ComObject __this, 
-						global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> handler)
-			{
-				// Setup
-				void* unsafe_handler = default(void*);
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
-										handler, 
-										typeof(global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>).TypeHandle
-									);
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>).TypeHandle, 
-										6, 
-										unsafe_handler
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					// Return
-				}
-				finally
-				{
-					// Cleanup
-					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
-				}
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> get_Progress(global::System.__ComObject __this)
-			{
-				global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> __ret = global::__Interop.ForwardComStubs.Stub_48<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
-									__this, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			// Signature, Windows.Foundation.IAsyncOperationWithProgress<uint,uint>.put_Completed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationWithProgressCompletedHandler_2_uint__uint___Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V_ *, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Completed(
-						global::System.__ComObject __this, 
-						global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> handler)
-			{
-				// Setup
-				void* unsafe_handler = default(void*);
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
-										handler, 
-										typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>).TypeHandle
-									);
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>).TypeHandle, 
-										8, 
-										unsafe_handler
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					// Return
-				}
-				finally
-				{
-					// Cleanup
-					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
-				}
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> get_Completed(global::System.__ComObject __this)
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static uint GetResults(global::System.__ComObject __this)
-			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
-									__this, 
-									10
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-		}
-
-		// DispatchClass for 'Windows.Foundation.IAsyncOperationWithProgress<uint,uint>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Id")]
-			uint global::Windows.Foundation.IAsyncInfo.get_Id()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return 0;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Status")]
-			global::Windows.Foundation.AsyncStatus global::Windows.Foundation.IAsyncInfo.get_Status()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncStatus);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.ErrorCode")]
-			global::System.Exception global::Windows.Foundation.IAsyncInfo.get_ErrorCode()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::System.Exception);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			void global::Windows.Foundation.IAsyncInfo.Cancel()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			void global::Windows.Foundation.IAsyncInfo.Close()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
-			void global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.put_Progress(global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> handler)
-			{
-				global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.put_Progress(
-									this, 
-									handler
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncOperationWithProgress`2.Progress")]
-			global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.get_Progress()
-			{
-				global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint> __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.get_Progress(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperationWithProgress`2.Completed")]
-			void global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.put_Completed(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> handler)
-			{
-				global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.put_Completed(
-									this, 
-									handler
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint> global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.get_Completed()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			uint global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>.GetResults()
-			{
-				uint __retVal = global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Stubs.GetResults(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-		}
-	}
-
-	// Windows.Foundation.AsyncOperationProgressHandler<uint,uint>
-	public unsafe static class AsyncOperationProgressHandler_A_uint_j_uint_V___Impl
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void Invoke(
-					this global::System.__ComObject __this, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> asyncInfo, 
-					uint progressInfo)
-		{
-			global::__Interop.ForwardComStubs.Stub_47<global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
-								__this, 
-								asyncInfo, 
-								progressInfo, 
-								3
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		// v-table for 'Windows.Foundation.AsyncOperationProgressHandler<uint,uint>'
-		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>))]
-		internal unsafe partial struct Vtbl
-		{
-			global::System.IntPtr pfnQueryInterface;
-			global::System.IntPtr pfnAddRef;
-			global::System.IntPtr pfnRelease;
-			// Windows_Foundation__AsyncOperationProgressHandler_A_uint_j_uint_V_
-			global::System.IntPtr pfnInvoke_;
-			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationProgressHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable")]
-			static global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl s_staticVtable
-			#if false
-			 = new global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl() {
-				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
-				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
-				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
-				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget19>(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.Invoke__n),
-			}
-			#endif
-			;
-			static global::System.IntPtr s_cachedVtable;
-			internal static global::System.IntPtr GetVtbl()
-			{
-				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.s_staticVtable))
-					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
-										pVtbl, 
-										ref global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl.s_cachedVtable, 
-										sizeof(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl)
-									);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.NativeCallable]
-			static int Invoke__n(
-						global::System.IntPtr pComThis, 
-						void* unsafe_asyncInfo, 
-						uint unsafe_progressInfo)
-			{
-				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
-				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationProgressHandler<uint, uint>>(
-									__this, 
-									0
-								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
-									__this, 
-									unsafe_asyncInfo, 
-									unsafe_progressInfo, 
-									__methodPtr
-								));
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			private static class Vtbl__McgRvaContainer
-			{
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl), "Invoke__n")]
-				[global::System.Runtime.CompilerServices.NonArray]
-				static readonly byte[] RVA_Windows_Foundation_AsyncOperationProgressHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
-						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-			}
-		}
-	}
-
-	// Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint,uint>
-	public unsafe static class AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void Invoke(
-					this global::System.__ComObject __this, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> asyncInfo, 
-					global::Windows.Foundation.AsyncStatus asyncStatus)
-		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>, global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
-								__this, 
-								asyncInfo, 
-								((int)asyncStatus), 
-								3
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		// v-table for 'Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint,uint>'
-		[global::System.Runtime.InteropServices.McgRootsType(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>))]
-		internal unsafe partial struct Vtbl
-		{
-			global::System.IntPtr pfnQueryInterface;
-			global::System.IntPtr pfnAddRef;
-			global::System.IntPtr pfnRelease;
-			// Windows_Foundation__AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V_
-			global::System.IntPtr pfnInvoke_;
-			[global::System.Runtime.CompilerServices.InitDataBlob(typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.Vtbl__McgRvaContainer), "RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable")]
-			static global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl s_staticVtable
-			#if false
-			 = new global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl() {
-				pfnQueryInterface = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfQueryInterface>(System.Runtime.InteropServices.__vtable_IUnknown.QueryInterface),
-				pfnAddRef = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfAddRef>(System.Runtime.InteropServices.__vtable_IUnknown.AddRef),
-				pfnRelease = global::__Interop.Intrinsics.AddrOf<global::System.Runtime.InteropServices.AddrOfRelease>(System.Runtime.InteropServices.__vtable_IUnknown.Release),
-				pfnInvoke_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget20>(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.Invoke__n),
-			}
-			#endif
-			;
-			static global::System.IntPtr s_cachedVtable;
-			internal static global::System.IntPtr GetVtbl()
-			{
-				fixed (void* pVtbl = &(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.s_staticVtable))
-					return global::System.Runtime.InteropServices.McgMarshal.GetCCWVTableCopy(
-										pVtbl, 
-										ref global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl.s_cachedVtable, 
-										sizeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl)
-									);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.NativeCallable]
-			static int Invoke__n(
-						global::System.IntPtr pComThis, 
-						void* unsafe_asyncInfo, 
-						global::Windows.Foundation.AsyncStatus unsafe_asyncStatus)
-			{
-				object __this = global::System.Runtime.InteropServices.McgMarshal.ThisPointerToTargetObject(pComThis);
-				global::System.IntPtr __methodPtr = global::__Interop.Intrinsics.VirtualAddrOf<global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler<uint, uint>>(
-									__this, 
-									0
-								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15<global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint>>(
-									__this, 
-									unsafe_asyncInfo, 
-									unsafe_asyncStatus, 
-									__methodPtr
-								));
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			private static class Vtbl__McgRvaContainer
-			{
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(0, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "QueryInterface")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(4, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "AddRef")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(8, typeof(global::System.Runtime.InteropServices.__vtable_IUnknown), "Release")]
-				[global::System.Runtime.CompilerServices.MethodAddrFixup(12, typeof(global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl), "Invoke__n")]
-				[global::System.Runtime.CompilerServices.NonArray]
-				static readonly byte[] RVA_Windows_Foundation_AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl_Vtbl_s_staticVtable = new byte[] {
-						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-			}
-		}
-	}
-
-	// Windows.Foundation.IAsyncOperation<bool>
-	public unsafe static class IAsyncOperation_A_bool_V___Impl
-	{
-		// StubClass for 'Windows.Foundation.IAsyncOperation<bool>'
-		public static partial class Stubs
-		{
-			// Signature, Windows.Foundation.IAsyncOperation<bool>.put_Completed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Foundation_AsyncOperationCompletedHandler_1_bool___Windows_Foundation__AsyncOperationCompletedHandler_A_bool_V_ *, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Completed(
-						global::System.__ComObject __this, 
-						global::Windows.Foundation.AsyncOperationCompletedHandler<bool> handler)
-			{
-				// Setup
-				void* unsafe_handler = default(void*);
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					unsafe_handler = (void*)global::System.Runtime.InteropServices.McgMarshal.DelegateToComInterface(
-										handler, 
-										typeof(global::Windows.Foundation.AsyncOperationCompletedHandler<bool>).TypeHandle
-									);
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.IAsyncOperation<bool>).TypeHandle, 
-										6, 
-										unsafe_handler
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					// Return
-				}
-				finally
-				{
-					// Cleanup
-					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_handler)));
-				}
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.Foundation.AsyncOperationCompletedHandler<bool> get_Completed(global::System.__ComObject __this)
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncOperationCompletedHandler<bool>);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static bool GetResults(global::System.__ComObject __this)
-			{
-				bool __ret = global::__Interop.ForwardComStubs.Stub_12<global::Windows.Foundation.IAsyncOperation<bool>>(
-									__this, 
-									8
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-		}
-
-		// DispatchClass for 'Windows.Foundation.IAsyncOperation<bool>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.IAsyncOperation<bool>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.IAsyncOperation<bool>
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Id")]
-			uint global::Windows.Foundation.IAsyncInfo.get_Id()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return 0;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.Status")]
-			global::Windows.Foundation.AsyncStatus global::Windows.Foundation.IAsyncInfo.get_Status()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncStatus);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.IAsyncInfo.ErrorCode")]
-			global::System.Exception global::Windows.Foundation.IAsyncInfo.get_ErrorCode()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::System.Exception);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			void global::Windows.Foundation.IAsyncInfo.Cancel()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			void global::Windows.Foundation.IAsyncInfo.Close()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Windows.Foundation.IAsyncOperation`1.Completed")]
-			void global::Windows.Foundation.IAsyncOperation<bool>.put_Completed(global::Windows.Foundation.AsyncOperationCompletedHandler<bool> handler)
-			{
-				global::Windows.Foundation.IAsyncOperation_A_bool_V___Impl.Stubs.put_Completed(
-									this, 
-									handler
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			global::Windows.Foundation.AsyncOperationCompletedHandler<bool> global::Windows.Foundation.IAsyncOperation<bool>.get_Completed()
-			{
-				global::__Interop.McgHelpers.FailFastForReducedMethod();
-				return default(global::Windows.Foundation.AsyncOperationCompletedHandler<bool>);
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			bool global::Windows.Foundation.IAsyncOperation<bool>.GetResults()
-			{
-				bool __retVal = global::Windows.Foundation.IAsyncOperation_A_bool_V___Impl.Stubs.GetResults(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-		}
-	}
-
-	// Windows.Foundation.AsyncOperationCompletedHandler<bool>
-	public unsafe static class AsyncOperationCompletedHandler_A_bool_V___Impl
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void Invoke(
-					this global::System.__ComObject __this, 
-					global::Windows.Foundation.IAsyncOperation<bool> asyncInfo, 
-					global::Windows.Foundation.AsyncStatus asyncStatus)
-		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<bool>, global::Windows.Foundation.IAsyncOperation<bool>>(
-								__this, 
-								asyncInfo, 
-								((int)asyncStatus), 
-								3
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-	}
-
 	// Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream>
 	public unsafe static class IAsyncOperation_A__w_Storage_Streams_IRandomAccessStream_V___Impl
 	{
@@ -11122,7 +11122,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.Streams.IRandomAccessStream>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.Streams.IRandomAccessStream>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -11267,7 +11267,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Devices.Enumeration.DeviceInformationCollection>, global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Devices.Enumeration.DeviceInformationCollection>, global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.DeviceInformationCollection>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -11286,7 +11286,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.IStorageItem> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.IStorageItem>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.IStorageItem>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.IStorageItem>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.IStorageItem>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -11431,7 +11431,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Media.Ocr.OcrResult> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Media.Ocr.OcrResult>, global::Windows.Foundation.IAsyncOperation<global::Windows.Media.Ocr.OcrResult>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Media.Ocr.OcrResult>, global::Windows.Foundation.IAsyncOperation<global::Windows.Media.Ocr.OcrResult>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -11828,7 +11828,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFile> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.StorageFile>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFile>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.StorageFile>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFile>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -11847,7 +11847,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.StorageLibrary>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Storage.StorageLibrary>, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -11992,7 +11992,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.BitmapEncoder> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Graphics.Imaging.BitmapEncoder>, global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.BitmapEncoder>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Graphics.Imaging.BitmapEncoder>, global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.BitmapEncoder>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -12263,7 +12263,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.SoftwareBitmap> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Graphics.Imaging.SoftwareBitmap>, global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.SoftwareBitmap>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Graphics.Imaging.SoftwareBitmap>, global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.SoftwareBitmap>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -12282,7 +12282,7 @@ namespace Windows.Foundation
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.BitmapDecoder> asyncInfo, 
 					global::Windows.Foundation.AsyncStatus asyncStatus)
 		{
-			global::__Interop.ForwardComStubs.Stub_41<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Graphics.Imaging.BitmapDecoder>, global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.BitmapDecoder>>(
+			global::__Interop.ForwardComStubs.Stub_45<global::Windows.Foundation.AsyncOperationCompletedHandler<global::Windows.Graphics.Imaging.BitmapDecoder>, global::Windows.Foundation.IAsyncOperation<global::Windows.Graphics.Imaging.BitmapDecoder>>(
 								__this, 
 								asyncInfo, 
 								((int)asyncStatus), 
@@ -20733,6 +20733,59 @@ namespace Windows.Media.Capture
 				return __ret;
 			}
 
+			// Signature, Windows.Media.Capture.IMediaCapture.CapturePhotoToStreamAsync, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Media_MediaProperties_ImageEncodingProperties__Windows_Media_MediaProperties__ImageEncodingProperties *, [fwd] [in] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Storage_Streams_IRandomAccessStream__Windows_Storage_Streams__IRandomAccessStream *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Foundation_IAsyncAction__Windows_Foundation__IAsyncAction *, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.IAsyncAction CapturePhotoToStreamAsync(
+						global::System.__ComObject __this, 
+						global::Windows.Media.MediaProperties.ImageEncodingProperties type, 
+						global::Windows.Storage.Streams.IRandomAccessStream stream)
+			{
+				// Setup
+				void* unsafe_type = default(void*);
+				void* unsafe_stream = default(void*);
+				void* unsafe_asyncInfo__retval = default(void*);
+				global::Windows.Foundation.IAsyncAction asyncInfo__retval = default(global::Windows.Foundation.IAsyncAction);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_type = (void*)global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(
+										type, 
+										typeof(global::Windows.Media.MediaProperties.ImageEncodingProperties).TypeHandle
+									);
+					unsafe_stream = (void*)global::System.Runtime.InteropServices.McgMarshal.ObjectToComInterface(
+										stream, 
+										typeof(global::Windows.Storage.Streams.IRandomAccessStream).TypeHandle
+									);
+					unsafe_asyncInfo__retval = null;
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Media.Capture.IMediaCapture).TypeHandle, 
+										14, 
+										unsafe_type, 
+										unsafe_stream, 
+										&(unsafe_asyncInfo__retval)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					asyncInfo__retval = (global::Windows.Foundation.IAsyncAction)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
+										((global::System.IntPtr)unsafe_asyncInfo__retval), 
+										typeof(global::Windows.Foundation.IAsyncAction).TypeHandle
+									);
+					// Return
+					return asyncInfo__retval;
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_type)));
+					global::System.GC.KeepAlive(type);
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_stream)));
+					global::System.GC.KeepAlive(stream);
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_asyncInfo__retval)));
+				}
+			}
+
 			// Signature, Windows.Media.Capture.IMediaCapture.add_Failed, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.WinRTDelegateMarshaller] Windows_Media_Capture_MediaCaptureFailedEventHandler__Windows_Media_Capture__MediaCaptureFailedEventHandler *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken__Windows_Foundation__EventRegistrationToken, 
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_Failed(
@@ -21031,7 +21084,7 @@ namespace Windows.Media.Devices
 						global::System.__ComObject __this, 
 						global::Windows.Media.Capture.MediaStreamType mediaStreamType)
 			{
-				global::System.Collections.Generic.IReadOnlyList<global::Windows.Media.MediaProperties.IMediaEncodingProperties> __ret = global::__Interop.ForwardComStubs.Stub_36<global::Windows.Media.Devices.IMediaDeviceController, global::System.Collections.Generic.IReadOnlyList<global::Windows.Media.MediaProperties.IMediaEncodingProperties>>(
+				global::System.Collections.Generic.IReadOnlyList<global::Windows.Media.MediaProperties.IMediaEncodingProperties> __ret = global::__Interop.ForwardComStubs.Stub_47<global::Windows.Media.Devices.IMediaDeviceController, global::System.Collections.Generic.IReadOnlyList<global::Windows.Media.MediaProperties.IMediaEncodingProperties>>(
 									__this, 
 									((int)mediaStreamType), 
 									6
@@ -21045,7 +21098,7 @@ namespace Windows.Media.Devices
 						global::System.__ComObject __this, 
 						global::Windows.Media.Capture.MediaStreamType mediaStreamType)
 			{
-				global::Windows.Media.MediaProperties.IMediaEncodingProperties __ret = global::__Interop.ForwardComStubs.Stub_36<global::Windows.Media.Devices.IMediaDeviceController, global::Windows.Media.MediaProperties.IMediaEncodingProperties>(
+				global::Windows.Media.MediaProperties.IMediaEncodingProperties __ret = global::__Interop.ForwardComStubs.Stub_47<global::Windows.Media.Devices.IMediaDeviceController, global::Windows.Media.MediaProperties.IMediaEncodingProperties>(
 									__this, 
 									((int)mediaStreamType), 
 									7
@@ -21293,6 +21346,68 @@ namespace Windows.Media.Devices
 
 namespace Windows.Media.MediaProperties
 {
+	// Windows.Media.MediaProperties.IImageEncodingPropertiesStatics
+	public unsafe static class IImageEncodingPropertiesStatics__Impl
+	{
+		// StubClass for 'Windows.Media.MediaProperties.IImageEncodingPropertiesStatics'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Media.MediaProperties.ImageEncodingProperties CreateJpeg(global::System.__ComObject __this)
+			{
+				global::Windows.Media.MediaProperties.ImageEncodingProperties __ret = global::__Interop.ForwardComStubs.Stub_10<global::Windows.Media.MediaProperties.IImageEncodingPropertiesStatics, global::Windows.Media.MediaProperties.ImageEncodingProperties>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
+	// Windows.Media.MediaProperties.IImageEncodingProperties
+	public unsafe static class IImageEncodingProperties__Impl
+	{
+		// StubClass for 'Windows.Media.MediaProperties.IImageEncodingProperties'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Width(
+						global::System.__ComObject __this, 
+						uint value)
+			{
+				global::__Interop.ForwardComStubs.Stub_36<global::Windows.Media.MediaProperties.IImageEncodingProperties>(
+									__this, 
+									value, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static uint get_Width(global::System.__ComObject __this)
+			{
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Media.MediaProperties.IImageEncodingProperties>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static uint get_Height(global::System.__ComObject __this)
+			{
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Media.MediaProperties.IImageEncodingProperties>(
+									__this, 
+									9
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
 	// Windows.Media.MediaProperties.IMediaEncodingProperties
 	public unsafe static class IMediaEncodingProperties__Impl
 	{
@@ -21323,36 +21438,6 @@ namespace Windows.Media.MediaProperties
 		}
 	}
 
-	// Windows.Media.MediaProperties.IImageEncodingProperties
-	public unsafe static class IImageEncodingProperties__Impl
-	{
-		// StubClass for 'Windows.Media.MediaProperties.IImageEncodingProperties'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static uint get_Width(global::System.__ComObject __this)
-			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Media.MediaProperties.IImageEncodingProperties>(
-									__this, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static uint get_Height(global::System.__ComObject __this)
-			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Media.MediaProperties.IImageEncodingProperties>(
-									__this, 
-									9
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-		}
-	}
-
 	// Windows.Media.MediaProperties.IVideoEncodingProperties
 	public unsafe static class IVideoEncodingProperties__Impl
 	{
@@ -21360,9 +21445,22 @@ namespace Windows.Media.MediaProperties
 		public static partial class Stubs
 		{
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Width(
+						global::System.__ComObject __this, 
+						uint value)
+			{
+				global::__Interop.ForwardComStubs.Stub_36<global::Windows.Media.MediaProperties.IVideoEncodingProperties>(
+									__this, 
+									value, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Width(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Media.MediaProperties.IVideoEncodingProperties>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Media.MediaProperties.IVideoEncodingProperties>(
 									__this, 
 									9
 								);
@@ -21373,7 +21471,7 @@ namespace Windows.Media.MediaProperties
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Height(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Media.MediaProperties.IVideoEncodingProperties>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Media.MediaProperties.IVideoEncodingProperties>(
 									__this, 
 									11
 								);
@@ -21403,7 +21501,7 @@ namespace Windows.Media.MediaProperties
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Numerator(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Media.MediaProperties.IMediaRatio>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Media.MediaProperties.IMediaRatio>(
 									__this, 
 									7
 								);
@@ -21414,7 +21512,7 @@ namespace Windows.Media.MediaProperties
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Denominator(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Media.MediaProperties.IMediaRatio>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Media.MediaProperties.IMediaRatio>(
 									__this, 
 									9
 								);
@@ -21680,7 +21778,7 @@ namespace Windows.Storage
 						global::System.__ComObject __this, 
 						global::Windows.Storage.FileAccessMode accessMode)
 			{
-				global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream> __ret = global::__Interop.ForwardComStubs.Stub_36<global::Windows.Storage.IStorageFile, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream>>(
+				global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream> __ret = global::__Interop.ForwardComStubs.Stub_47<global::Windows.Storage.IStorageFile, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream>>(
 									__this, 
 									((int)accessMode), 
 									8
@@ -21721,7 +21819,7 @@ namespace Windows.Storage
 						global::System.__ComObject __this, 
 						global::Windows.Storage.KnownLibraryId libraryId)
 			{
-				global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary> __ret = global::__Interop.ForwardComStubs.Stub_36<global::Windows.Storage.IStorageLibraryStatics, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary>>(
+				global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary> __ret = global::__Interop.ForwardComStubs.Stub_47<global::Windows.Storage.IStorageLibraryStatics, global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageLibrary>>(
 									__this, 
 									((int)libraryId), 
 									6
@@ -21882,7 +21980,7 @@ namespace Windows.Storage.Streams
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static ulong get_Size(global::System.__ComObject __this)
 			{
-				ulong __ret = global::__Interop.ForwardComStubs.Stub_43<global::Windows.Storage.Streams.IRandomAccessStream>(
+				ulong __ret = global::__Interop.ForwardComStubs.Stub_41<global::Windows.Storage.Streams.IRandomAccessStream>(
 									__this, 
 									6
 								);
@@ -21895,7 +21993,7 @@ namespace Windows.Storage.Streams
 						global::System.__ComObject __this, 
 						ulong value)
 			{
-				global::__Interop.ForwardComStubs.Stub_44<global::Windows.Storage.Streams.IRandomAccessStream>(
+				global::__Interop.ForwardComStubs.Stub_42<global::Windows.Storage.Streams.IRandomAccessStream>(
 									__this, 
 									value, 
 									7
@@ -21906,7 +22004,7 @@ namespace Windows.Storage.Streams
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static ulong get_Position(global::System.__ComObject __this)
 			{
-				ulong __ret = global::__Interop.ForwardComStubs.Stub_43<global::Windows.Storage.Streams.IRandomAccessStream>(
+				ulong __ret = global::__Interop.ForwardComStubs.Stub_41<global::Windows.Storage.Streams.IRandomAccessStream>(
 									__this, 
 									10
 								);
@@ -21919,7 +22017,7 @@ namespace Windows.Storage.Streams
 						global::System.__ComObject __this, 
 						ulong position)
 			{
-				global::__Interop.ForwardComStubs.Stub_44<global::Windows.Storage.Streams.IRandomAccessStream>(
+				global::__Interop.ForwardComStubs.Stub_42<global::Windows.Storage.Streams.IRandomAccessStream>(
 									__this, 
 									position, 
 									11
@@ -22016,7 +22114,7 @@ namespace Windows.Storage.Streams
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Capacity(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Storage.Streams.IBuffer>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Storage.Streams.IBuffer>(
 									__this, 
 									6
 								);
@@ -22027,7 +22125,7 @@ namespace Windows.Storage.Streams
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static uint get_Length(global::System.__ComObject __this)
 			{
-				uint __ret = global::__Interop.ForwardComStubs.Stub_38<global::Windows.Storage.Streams.IBuffer>(
+				uint __ret = global::__Interop.ForwardComStubs.Stub_37<global::Windows.Storage.Streams.IBuffer>(
 									__this, 
 									7
 								);
@@ -22040,7 +22138,7 @@ namespace Windows.Storage.Streams
 						global::System.__ComObject __this, 
 						uint value)
 			{
-				global::__Interop.ForwardComStubs.Stub_45<global::Windows.Storage.Streams.IBuffer>(
+				global::__Interop.ForwardComStubs.Stub_36<global::Windows.Storage.Streams.IBuffer>(
 									__this, 
 									value, 
 									8
@@ -22108,9 +22206,9 @@ namespace Windows.Storage.Streams
 				pfnGetIids = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget1>(System.Runtime.InteropServices.__vtable_IInspectable.GetIIDs),
 				pfnGetRuntimeClassName = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetRuntimeClassName),
 				pfnGetTrustLevel = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetTrustLevel),
-				pfnget_Capacity_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget17>(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl.get_Capacity__n),
-				pfnget_Length_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget17>(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl.get_Length__n),
-				pfnput_Length_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget18>(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl.put_Length__n),
+				pfnget_Capacity_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget7>(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl.get_Capacity__n),
+				pfnget_Length_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget7>(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl.get_Length__n),
+				pfnput_Length_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget8>(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl.put_Length__n),
 			}
 			#endif
 			;
@@ -22136,7 +22234,7 @@ namespace Windows.Storage.Streams
 									__this, 
 									0
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_12(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_9(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -22156,7 +22254,7 @@ namespace Windows.Storage.Streams
 									__this, 
 									1
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_12(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_9(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -22176,7 +22274,7 @@ namespace Windows.Storage.Streams
 									__this, 
 									2
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_13(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10(
 									__this, 
 									unsafe_value, 
 									__methodPtr
@@ -24089,6 +24187,41 @@ namespace Windows.UI.Xaml
 		// StubClass for 'Windows.UI.Xaml.IUIElement'
 		public static partial class Stubs
 		{
+			// Signature, Windows.UI.Xaml.IUIElement.get_Visibility, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.EnumMarshaller] Windows_UI_Xaml_Visibility__Windows_UI_Xaml__Visibility, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Visibility get_Visibility(global::System.__ComObject __this)
+			{
+				// Setup
+				global::Windows.UI.Xaml.Visibility unsafe_value__retval;
+				global::Windows.UI.Xaml.Visibility value__retval;
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.UI.Xaml.IUIElement).TypeHandle, 
+									21, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = unsafe_value__retval;
+				// Return
+				return value__retval;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Visibility(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Visibility value)
+			{
+				global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									((int)value), 
+									22
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_KeyUp(
 						global::System.__ComObject __this, 
@@ -25901,6 +26034,28 @@ namespace Windows.UI.Xaml
 									22
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			// Signature, Windows.UI.Xaml.IFrameworkElement.get_HorizontalAlignment, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.EnumMarshaller] Windows_UI_Xaml_HorizontalAlignment__Windows_UI_Xaml__HorizontalAlignment, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.HorizontalAlignment get_HorizontalAlignment(global::System.__ComObject __this)
+			{
+				// Setup
+				global::Windows.UI.Xaml.HorizontalAlignment unsafe_value__retval;
+				global::Windows.UI.Xaml.HorizontalAlignment value__retval;
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.UI.Xaml.IFrameworkElement).TypeHandle, 
+									27, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = unsafe_value__retval;
+				// Return
+				return value__retval;
 			}
 
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -28394,6 +28549,30 @@ namespace Windows.UI.Xaml.Controls
 			}
 
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.Brush get_Foreground(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.Brush __ret = global::__Interop.ForwardComStubs.Stub_10<global::Windows.UI.Xaml.Controls.IControl, global::Windows.UI.Xaml.Media.Brush>(
+									__this, 
+									18
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Foreground(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.Brush value)
+			{
+				global::__Interop.ForwardComStubs.Stub_5<global::Windows.UI.Xaml.Controls.IControl, global::Windows.UI.Xaml.Media.Brush>(
+									__this, 
+									value, 
+									19
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static bool get_IsEnabled(global::System.__ComObject __this)
 			{
 				bool __ret = global::__Interop.ForwardComStubs.Stub_12<global::Windows.UI.Xaml.Controls.IControl>(
@@ -29796,6 +29975,28 @@ namespace Windows.UI.Xaml.Controls
 		// StubClass for 'Windows.UI.Xaml.Controls.IStackPanel'
 		public static partial class Stubs
 		{
+			// Signature, Windows.UI.Xaml.Controls.IStackPanel.get_Orientation, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.EnumMarshaller] Windows_UI_Xaml_Controls_Orientation__Windows_UI_Xaml_Controls__Orientation, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Controls.Orientation get_Orientation(global::System.__ComObject __this)
+			{
+				// Setup
+				global::Windows.UI.Xaml.Controls.Orientation unsafe_value__retval;
+				global::Windows.UI.Xaml.Controls.Orientation value__retval;
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.UI.Xaml.Controls.IStackPanel).TypeHandle, 
+									8, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = unsafe_value__retval;
+				// Return
+				return value__retval;
+			}
+
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static void put_Orientation(
 						global::System.__ComObject __this, 
@@ -31104,7 +31305,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						global::Windows.UI.Xaml.Controls.ContextMenuOpeningEventHandler value)
 			{
-				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_42<global::Windows.UI.Xaml.Controls.ITextBlock>(
+				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_48<global::Windows.UI.Xaml.Controls.ITextBlock>(
 									__this, 
 									value, 
 									45
@@ -31208,6 +31409,38 @@ namespace Windows.UI.Xaml.Controls
 				[global::System.Runtime.CompilerServices.NonArray]
 				static readonly byte[] RVA_Windows_UI_Xaml_Controls_ContextMenuOpeningEventHandler__Impl_Vtbl_s_staticVtable = new byte[] {
 						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Controls.IProgressRing
+	public unsafe static class IProgressRing__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Controls.IProgressRing'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_IsActive(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_12<global::Windows.UI.Xaml.Controls.IProgressRing>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_IsActive(
+						global::System.__ComObject __this, 
+						bool value)
+			{
+				global::__Interop.ForwardComStubs.Stub_30<global::Windows.UI.Xaml.Controls.IProgressRing>(
+									__this, 
+									value, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
 		}
 	}
@@ -31397,7 +31630,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						global::Windows.UI.Xaml.Controls.ContextMenuOpeningEventHandler value)
 			{
-				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_42<global::Windows.UI.Xaml.Controls.ITextBox>(
+				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_48<global::Windows.UI.Xaml.Controls.ITextBox>(
 									__this, 
 									value, 
 									34
@@ -33342,9 +33575,9 @@ namespace Windows.UI.Xaml.Markup
 				pfnGetIids = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget1>(System.Runtime.InteropServices.__vtable_IInspectable.GetIIDs),
 				pfnGetRuntimeClassName = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetRuntimeClassName),
 				pfnGetTrustLevel = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetTrustLevel),
-				pfnGetXamlType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget7>(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider__Impl.Vtbl.GetXamlType__n),
-				pfnGetXamlTypeByFullName_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget8>(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider__Impl.Vtbl.GetXamlTypeByFullName__n),
-				pfnGetXmlnsDefinitions_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget9>(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider__Impl.Vtbl.GetXmlnsDefinitions__n),
+				pfnGetXamlType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider__Impl.Vtbl.GetXamlType__n),
+				pfnGetXamlTypeByFullName_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget12>(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider__Impl.Vtbl.GetXamlTypeByFullName__n),
+				pfnGetXmlnsDefinitions_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget13>(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider__Impl.Vtbl.GetXmlnsDefinitions__n),
 			}
 			#endif
 			;
@@ -33415,7 +33648,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									1
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_9<global::Windows.UI.Xaml.Markup.IXamlType>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_13<global::Windows.UI.Xaml.Markup.IXamlType>(
 									__this, 
 									unsafe_fullName, 
 									((void**)unsafe_xamlType__retval), 
@@ -33989,23 +34222,23 @@ namespace Windows.UI.Xaml.Markup
 				pfnGetIids = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget1>(System.Runtime.InteropServices.__vtable_IInspectable.GetIIDs),
 				pfnGetRuntimeClassName = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetRuntimeClassName),
 				pfnGetTrustLevel = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetTrustLevel),
-				pfnget_BaseType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_BaseType__n),
-				pfnget_ContentProperty_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_ContentProperty__n),
+				pfnget_BaseType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_BaseType__n),
+				pfnget_ContentProperty_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_ContentProperty__n),
 				pfnget_FullName_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget3>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_FullName__n),
-				pfnget_IsArray_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsArray__n),
-				pfnget_IsCollection_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsCollection__n),
-				pfnget_IsConstructible_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsConstructible__n),
-				pfnget_IsDictionary_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsDictionary__n),
-				pfnget_IsMarkupExtension_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsMarkupExtension__n),
-				pfnget_IsBindable_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsBindable__n),
-				pfnget_ItemType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_ItemType__n),
-				pfnget_KeyType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_KeyType__n),
-				pfnget_UnderlyingType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget12>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_UnderlyingType__n),
-				pfnActivateInstance_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.ActivateInstance__n),
-				pfnCreateFromString_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget8>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.CreateFromString__n),
-				pfnGetMember_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget8>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.GetMember__n),
+				pfnget_IsArray_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsArray__n),
+				pfnget_IsCollection_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsCollection__n),
+				pfnget_IsConstructible_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsConstructible__n),
+				pfnget_IsDictionary_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsDictionary__n),
+				pfnget_IsMarkupExtension_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsMarkupExtension__n),
+				pfnget_IsBindable_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_IsBindable__n),
+				pfnget_ItemType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_ItemType__n),
+				pfnget_KeyType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_KeyType__n),
+				pfnget_UnderlyingType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget16>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.get_UnderlyingType__n),
+				pfnActivateInstance_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.ActivateInstance__n),
+				pfnCreateFromString_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget12>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.CreateFromString__n),
+				pfnGetMember_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget12>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.GetMember__n),
 				pfnAddToVector_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget0>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.AddToVector__n),
-				pfnAddToMap_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget13>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.AddToMap__n),
+				pfnAddToMap_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget17>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.AddToMap__n),
 				pfnRunInitializer_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget6>(global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl.RunInitializer__n),
 			}
 			#endif
@@ -34032,7 +34265,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									0
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10<global::Windows.UI.Xaml.Markup.IXamlType>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.UI.Xaml.Markup.IXamlType>(
 									__this, 
 									((void**)unsafe_value__retval), 
 									__methodPtr
@@ -34052,7 +34285,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									1
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10<global::Windows.UI.Xaml.Markup.IXamlMember>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.UI.Xaml.Markup.IXamlMember>(
 									__this, 
 									((void**)unsafe_value__retval), 
 									__methodPtr
@@ -34092,7 +34325,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									3
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34112,7 +34345,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									4
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34132,7 +34365,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									5
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34152,7 +34385,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									6
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34172,7 +34405,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									7
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34192,7 +34425,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									8
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34212,7 +34445,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									9
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10<global::Windows.UI.Xaml.Markup.IXamlType>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.UI.Xaml.Markup.IXamlType>(
 									__this, 
 									((void**)unsafe_value__retval), 
 									__methodPtr
@@ -34232,7 +34465,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									10
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10<global::Windows.UI.Xaml.Markup.IXamlType>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.UI.Xaml.Markup.IXamlType>(
 									__this, 
 									((void**)unsafe_value__retval), 
 									__methodPtr
@@ -34366,7 +34599,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									14
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_9<global::Windows.UI.Xaml.Markup.IXamlMember>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_13<global::Windows.UI.Xaml.Markup.IXamlMember>(
 									__this, 
 									unsafe_name, 
 									((void**)unsafe_xamlMember__retval), 
@@ -34723,13 +34956,13 @@ namespace Windows.UI.Xaml.Markup
 				pfnGetIids = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget1>(System.Runtime.InteropServices.__vtable_IInspectable.GetIIDs),
 				pfnGetRuntimeClassName = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetRuntimeClassName),
 				pfnGetTrustLevel = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetTrustLevel),
-				pfnget_IsAttachable_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_IsAttachable__n),
-				pfnget_IsDependencyProperty_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_IsDependencyProperty__n),
-				pfnget_IsReadOnly_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget11>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_IsReadOnly__n),
+				pfnget_IsAttachable_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_IsAttachable__n),
+				pfnget_IsDependencyProperty_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_IsDependencyProperty__n),
+				pfnget_IsReadOnly_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_IsReadOnly__n),
 				pfnget_Name_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget3>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_Name__n),
-				pfnget_TargetType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_TargetType__n),
-				pfnget_Type_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget10>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_Type__n),
-				pfnGetValue_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.GetValue__n),
+				pfnget_TargetType_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_TargetType__n),
+				pfnget_Type_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget14>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.get_Type__n),
+				pfnGetValue_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget18>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.GetValue__n),
 				pfnSetValue_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget0>(global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl.SetValue__n),
 			}
 			#endif
@@ -34756,7 +34989,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									0
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34776,7 +35009,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									1
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34796,7 +35029,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									2
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_11(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_15(
 									__this, 
 									unsafe_value__retval, 
 									__methodPtr
@@ -34836,7 +35069,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									4
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10<global::Windows.UI.Xaml.Markup.IXamlType>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.UI.Xaml.Markup.IXamlType>(
 									__this, 
 									((void**)unsafe_value__retval), 
 									__methodPtr
@@ -34856,7 +35089,7 @@ namespace Windows.UI.Xaml.Markup
 									__this, 
 									5
 								);
-				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_10<global::Windows.UI.Xaml.Markup.IXamlType>(
+				int __ret = ((int)global::__Interop.ReverseComStubs.Stub_14<global::Windows.UI.Xaml.Markup.IXamlType>(
 									__this, 
 									((void**)unsafe_value__retval), 
 									__methodPtr
@@ -34975,7 +35208,7 @@ namespace Windows.UI.Xaml.Markup
 				pfnGetIids = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget1>(System.Runtime.InteropServices.__vtable_IInspectable.GetIIDs),
 				pfnGetRuntimeClassName = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetRuntimeClassName),
 				pfnGetTrustLevel = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetTrustLevel),
-				pfnConnect_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget15>(global::Windows.UI.Xaml.Markup.IComponentConnector__Impl.Vtbl.Connect__n),
+				pfnConnect_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget19>(global::Windows.UI.Xaml.Markup.IComponentConnector__Impl.Vtbl.Connect__n),
 			}
 			#endif
 			;
@@ -35062,7 +35295,7 @@ namespace Windows.UI.Xaml.Markup
 				pfnGetIids = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget1>(System.Runtime.InteropServices.__vtable_IInspectable.GetIIDs),
 				pfnGetRuntimeClassName = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetRuntimeClassName),
 				pfnGetTrustLevel = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget2>(System.Runtime.InteropServices.__vtable_IInspectable.GetTrustLevel),
-				pfnGetBindingConnector_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget16>(global::Windows.UI.Xaml.Markup.IComponentConnector2__Impl.Vtbl.GetBindingConnector__n),
+				pfnGetBindingConnector_ = global::__Interop.Intrinsics.AddrOf<global::__Interop.AddrOfIntrinsics.AddrOfTarget20>(global::Windows.UI.Xaml.Markup.IComponentConnector2__Impl.Vtbl.GetBindingConnector__n),
 			}
 			#endif
 			;

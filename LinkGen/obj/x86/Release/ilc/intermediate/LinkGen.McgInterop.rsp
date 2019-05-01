@@ -11,13 +11,13 @@
  /nologo
  /target:library
  /define:MCG_PRE_BUILD
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.CoreLib.dll"
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.CoreLib.InteropServices.dll"
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.Interop.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.CoreLib.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.CoreLib.InteropServices.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.Interop.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Private.Uri.dll"
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.CompilerServices.ICastable.dll"
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.Reflection.dll"
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.DispatchProxy.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.CompilerServices.ICastable.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.Reflection.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.DispatchProxy.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Reflection.DispatchProxy.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Reflection.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Runtime.dll"
@@ -29,7 +29,7 @@
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Runtime.WindowsRuntime.UI.Xaml.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Dynamic.Runtime.dll"
- /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\x86\ilc\lib\Private\System.Private.CoreLib.Augments.dll"
+ /r:"C:\Users\Sam\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\System.Private.CoreLib.Augments.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Runtime.Extensions.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.Collections.dll"
  /r:"C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x86\Release\ilc\in\System.ObjectModel.dll"

@@ -16,12 +16,10 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="16"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="10"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="16"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="16"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
-                        <Setter Target="PreviewControl.Width" Value="295"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="360"></Setter>
-
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
                         <Setter Target="listofurl.Width" Value="295"></Setter>
                         <Setter Target="listofurl.Height" Value="360"></Setter>
                     </VisualState.Setters>
@@ -32,12 +30,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="16"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="10"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="16"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="16"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="320"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="360"></Setter>
 
                         <Setter Target="listofurl.Width" Value="320"></Setter>
                         <Setter Target="listofurl.Height" Value="360"></Setter>
@@ -50,12 +47,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="16"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="10"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="16"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="16"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Vertical"></Setter>
-                        <Setter Target="PreviewControl.Width" Value="360"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="320"></Setter>
 
+                        <Setter Target="toplayer.VerticalAlignment" Value="Bottom"></Setter>
                         <Setter Target="listofurl.Width" Value="360"></Setter>
                         <Setter Target="listofurl.Height" Value="320"></Setter>
 
@@ -69,13 +65,12 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="32"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="32"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="32"></Setter>
 
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="640"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="720"></Setter>
 
                         <Setter Target="listofurl.Width" Value="640"></Setter>
                         <Setter Target="listofurl.Height" Value="720"></Setter>
@@ -85,18 +80,17 @@
 
                 <VisualState x:Name="pc_lenovo_y50">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth = "1536" />
-                        <AdaptiveTrigger MinWindowWidth = "864" />
+                        <AdaptiveTrigger MinWindowWidth = "1530" />
+                        <AdaptiveTrigger MinWindowWidth = "860" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="32"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="32"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="32"></Setter>
 
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="768"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="832"></Setter>
 
                         <Setter Target="listofurl.Width" Value="768"></Setter>
                         <Setter Target="listofurl.Height" Value="832"></Setter>
@@ -111,13 +105,12 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="32"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="32"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="32"></Setter>
 
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="640"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="800"></Setter>
 
                         <Setter Target="listofurl.Width" Value="640"></Setter>
                         <Setter Target="listofurl.Height" Value="800"></Setter>
@@ -131,12 +124,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="16"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="13"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="16"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="16"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="359"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="432"></Setter>
 
                         <Setter Target="listofurl.Width" Value="359"></Setter>
                         <Setter Target="listofurl.Height" Value="432"></Setter>
@@ -149,12 +141,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="16"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="13"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="16"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="16"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="384"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="432"></Setter>
 
                         <Setter Target="listofurl.Width" Value="384"></Setter>
                         <Setter Target="listofurl.Height" Value="432"></Setter>
@@ -168,12 +159,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="16"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="13"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="16"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="16"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Vertical"></Setter>
+                        <Setter Target="toplayer.VerticalAlignment" Value="Bottom"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="432"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="384"></Setter>
 
                         <Setter Target="listofurl.Width" Value="432"></Setter>
                         <Setter Target="listofurl.Height" Value="384"></Setter>
@@ -187,11 +177,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="36"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
-                        <Setter Target="camerapanel.Orientation" Value="Vertical"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="36"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="36"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="960"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="720"></Setter>
+                        <Setter Target="toplayer.VerticalAlignment" Value="Bottom"></Setter>
+
 
                         <Setter Target="listofurl.Width" Value="960"></Setter>
                         <Setter Target="listofurl.Height" Value="720"></Setter>
@@ -204,11 +194,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="36"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="36"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="36"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="720"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="960"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
+
 
                         <Setter Target="listofurl.Width" Value="720"></Setter>
                         <Setter Target="listofurl.Height" Value="960"></Setter>
@@ -221,12 +211,10 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="36"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="36"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="36"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Vertical"></Setter>
-
-                        <Setter Target="PreviewControl.Width" Value="1000"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="750"></Setter>
+                        <Setter Target="toplayer.VerticalAlignment" Value="Bottom"></Setter>
 
                         <Setter Target="listofurl.Width" Value="1000"></Setter>
                         <Setter Target="listofurl.Height" Value="750"></Setter>
@@ -239,12 +227,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="FlashButton.FontSize" Value="36"></Setter>
-                        <Setter Target="Referenceblock.FontSize" Value="22"></Setter>
+                        <Setter Target="Referenceblock.FontSize" Value="36"></Setter>
+                        <Setter Target="NoTextMessage.FontSize" Value="36"></Setter>
 
-                        <Setter Target="camerapanel.Orientation" Value="Horizontal"></Setter>
+                        <Setter Target="toplayer.HorizontalAlignment" Value="Right"></Setter>
 
-                        <Setter Target="PreviewControl.Width" Value="750"></Setter>
-                        <Setter Target="PreviewControl.Height" Value="1000"></Setter>
 
                         <Setter Target="listofurl.Width" Value="750"></Setter>
                         <Setter Target="listofurl.Height" Value="1000"></Setter>
@@ -260,18 +247,17 @@
         <StackPanel VerticalAlignment="Top" Canvas.ZIndex="2">
             <Button x:Name="FlashButton" Click="Flash_Click" IsEnabled="False" Margin="10" Content="Flash Off" FontFamily="Segoe" Background="White"/>
             <Button x:Name="SaveButton" Click="Save_Click" IsEnabled="True" Margin="10" FontSize="{Binding Path=FontSize,ElementName=FlashButton}" Width="{Binding Path=ActualWidth, ElementName=FlashButton}" Content="Save Off"  FontFamily="Segoe" Background="White"></Button>
+
         </StackPanel>
 
+        <StackPanel Canvas.ZIndex="2" Name="toplayer"  >
+            <StackPanel Orientation="Vertical" Margin="10" >
+                <TextBlock x:Name="Referenceblock" Text="Tap on picture to generate link. &#x0a;Long tap for long distance shooting"></TextBlock>
+                <TextBlock x:Name="NoTextMessage" Text="Nothing detected. Just Try Again" Visibility="Collapsed"></TextBlock>
+                <ProgressRing  x:Name="loading" Width="{Binding Path=Width, ElementName=FlashButton}" Height="{Binding Path=Width,ElementName=FlashButton}" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF008EFF" IsActive="False"></ProgressRing>
+            </StackPanel>
 
-
-        <StackPanel Name="camerapanel" Width="Auto" Height="Auto" Canvas.ZIndex="1" >
-            <!--Camera preview-->
-            <!--Captured preview frame image-->
-            <CaptureElement x:Name="PreviewControl" Tapped="GetPreviewFrameButton_Tapped" Height="Auto" Canvas.ZIndex="1"/>
-
-
-            <ListView x:Name = "listofurl"  Height="Auto" >
-                <TextBlock x:Name="Referenceblock" Text="Tap on picture to generate link. Didn't get it right? Just Tap again."></TextBlock>
+            <ListView x:Name = "listofurl"  Height="Auto"  VerticalAlignment="Top" >
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
 
@@ -279,6 +265,12 @@
                 </ListView.ItemContainerStyle>
             </ListView>
         </StackPanel>
+
+
+
+        <CaptureElement x:Name="PreviewControl" Tapped="GetPreviewFrameButton_Tapped"  Canvas.ZIndex="1" RightTapped="Longshot">
+
+        </CaptureElement>
 
 
     </Grid>

@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F" Version="1.2.3.0" ProcessorArchitecture="arm" />
+  <Identity Name="28945VerticiEntertainment.LinkGen" Publisher="CN=37CEDFE1-8BCE-42AB-ADE2-7643F66EF09F" Version="1.2.9.0" ProcessorArchitecture="arm" />
   <mp:PhoneIdentity PhoneProductId="6c5b8445-34fe-4381-8e2a-c932615c6c7d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>LinkGen</DisplayName>
@@ -49,7 +49,7 @@
     <build:Item Name="OperatingSystem" Version="10.0.16299.15 (WinBuild.160101.0800)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.27128.1" />
     <build:Item Name="ProjectGUID" Value="{2874B8B2-79F8-43CF-95BA-417FB7487A71}" />
-    <build:Item Name="ilc.exe" Version="1.7.25626.00 built by: PROJECTNGDR2" />
+    <build:Item Name="ilc.exe" Version="1.7.25927.00 built by: PROJECTNGDR2" />
     <build:Item Name="OptimizingToolset" Value="ilc.exe" />
     <build:Item Name="UseDotNetNativeSharedAssemblyFrameworkPackage" Value="True" />
     <build:Item Name="UniversalGenericsOptOut" Value="false" />

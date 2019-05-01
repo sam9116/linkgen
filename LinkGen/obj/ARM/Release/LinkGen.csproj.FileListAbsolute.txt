@@ -140,6 +140,7 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\System.Xml.ReaderWrite
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\System.Xml.XDocument.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\System.Xml.XmlDocument.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\System.Xml.XmlSerializer.dll
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\LinkGen.csprojResolveAssemblyReference.cache
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\App.g.i.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\App.g.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\MainPage.g.i.cs
@@ -417,4 +418,4 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\intermediate\sgarg
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll.ILTransformTask.repro
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.pdb
-C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\ARM\Release\LinkGen.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\ARM\Release\Upload\LinkGen.build.appxrecipe

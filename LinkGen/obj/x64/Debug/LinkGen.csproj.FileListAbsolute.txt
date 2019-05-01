@@ -122,6 +122,7 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.ReaderWriter.
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.XDocument.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.XmlDocument.dll
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\bin\x64\Debug\System.Xml.XmlSerializer.dll
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\LinkGen.csprojAssemblyReference.cache
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\App.g.i.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\App.g.cs
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\MainPage.g.i.cs
@@ -133,6 +134,7 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\App.xbf
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\MainPage.xbf
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\XamlSaveStateFile.xml
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\LinkGen.csproj.CoreCompileInputs.cache
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\LinkGen.csproj.CopyComplete
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\LinkGen.exe
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\LinkGen.pdb
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\ResourceHandlingTask.state
@@ -200,8 +202,12 @@ C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\FxResources.System.Xml.X
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\priconfig.xml
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\priconfig.xml.intermediate
-C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\layout.resfiles
-C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\unfiltered.layout.resfiles
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\filtered.layout.resfiles
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\filtered.layout.resfiles.intermediate
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\excluded.layout.resfiles
+C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\excluded.layout.resfiles.intermediate
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\resources.resfiles
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\resources.resfiles.intermediate
 C:\Users\Sam\Source\repos\LinkGen\LinkGen\obj\x64\Debug\pri.resfiles
